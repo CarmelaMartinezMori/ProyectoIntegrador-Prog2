@@ -3,10 +3,12 @@
 /* FONTS */
 
 
-header{
-    height: 55px;
+.header{
+    height: 70px;
     padding-top: 10px;
+    background-color: #8FC0A9;
 }
+
 header section{
     height: 100%;
 }
@@ -19,11 +21,14 @@ header a{
 }
 header nav ul li a:hover,
 header a:hover{
-    color: lightsteelblue;
+    color: lightblue;
     text-decoration: none;
 }
 .logo{
     margin: 0px;
+}
+#logo{
+    width: 15%;
 }
 .logo a{
     font-family: 'Fjalla One', sans-serif;
