@@ -7,6 +7,7 @@
     height: 70px;
     padding-top: 10px;
     background-color: #8FC0A9;
+    font-family: 'Mulish', sans-serif;
 }
 
 header section{
@@ -21,22 +22,23 @@ header a{
 }
 header nav ul li a:hover,
 header a:hover{
-    color: lightblue;
+    color: #294C60;
     text-decoration: none;
 }
-.logo{
-    margin: 0px;
-}
-#logo{
-    width: 15%;
+#logoImg{
+    width: 5%;
 }
 .logo a{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 5px;
     color: white;
 }
 .logo a:hover {
     text-decoration: none;
-    color: white;
+    color: #FFA526;
+    text-shadow: red;
 }
 header ul{
     margin: 0;
