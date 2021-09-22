@@ -8,7 +8,7 @@ const home = {
         },
         {
             id : 1,
-            usuario : "Arepa",
+            usuario : "loca",
             pie : "Tequeños",
             imagen : "comida5.jpeg",
         },
