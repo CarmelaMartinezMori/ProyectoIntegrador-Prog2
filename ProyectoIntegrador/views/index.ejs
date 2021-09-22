@@ -32,7 +32,7 @@
                                 </li>
                             </ul>
                             <div class="post-pie uk-flex">
-                                <h5 class="uk-width-1-6"><a href="/detalleUsuario">Usuario</a></h5>
+                                <h5 class="uk-width-1-6"><a href="/detalleUsuario"><%= users.posts[i].usuario%></a></h5>
                                 <p class="uk-width-5-6"><%= users.posts[i].pie%></p>
                             </div>
                         </div>
@@ -40,12 +40,12 @@
                             <h6>Comentarios</h6>
                             <ul>
                                 <li>
-                                    <a href="/detalleUsuario">Usuario</a>
-                                    <p>Comentario</p>
+                                    <a href="/detalleUsuario"><%= users.posts[i].primerComentador %></a>
+                                    <p><%= users.posts[i].primerComentario %></p>
                                 </li>
                                 <li>
-                                    <a href="/detalleUsuario">Usuario</a>
-                                    <p>Comentario</p>
+                                    <a href="/detalleUsuario"><%= users.posts[i].segundoComentador %></a>
+                                    <p><%= users.posts[i].segundoComentario %></p>
                                 </li>
                                 <a href="">Ver más...</a>
                             </ul>
