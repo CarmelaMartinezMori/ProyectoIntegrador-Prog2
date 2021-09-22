@@ -1,8 +1,8 @@
-const misFotos = require('../data/home');
+const miPerfil = require('../data/miPerfil');
 
-const miperfilController = {
-    index: function(req, res){
-        return res.render('miPerfil', {misFotos})
-    }
- }
+ const miperfilController = {
+    index: function(req, res, next) {
+        res.render('index', {perfil : miPerfil})
+    },
+}
  module.exports = miperfilController;

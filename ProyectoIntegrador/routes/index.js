@@ -9,6 +9,10 @@ router.get('/detallePost', function(req, res, next){
   res.render('detallePost', {title : "Express"});
 });
 
+router.get('/miperfil', function(req, res, next){
+  res.render('miperfil', {title : "Express"});
+});
+
 //router.get('/detaillePost/:id', indexController.detail);
 
 router.get('/login', function(req, res, next){
