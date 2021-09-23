@@ -2,7 +2,8 @@ const usuarios = {
     datos:[
         {   id: 1,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -11,7 +12,8 @@ const usuarios = {
         {
             id: 2,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -20,7 +22,8 @@ const usuarios = {
         {
             id: 3,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -29,7 +32,8 @@ const usuarios = {
         {
             id: 4,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -38,7 +42,8 @@ const usuarios = {
         {
             id: 5,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -47,7 +52,8 @@ const usuarios = {
         {
             id: 6,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -56,7 +62,8 @@ const usuarios = {
         {
             id: 7,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -65,7 +72,8 @@ const usuarios = {
         {
             id: 8,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -74,7 +82,8 @@ const usuarios = {
         {
             id: 9,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -83,7 +92,8 @@ const usuarios = {
         {
             id: 10,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -92,7 +102,8 @@ const usuarios = {
         {
             id: 11,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
@@ -101,7 +112,8 @@ const usuarios = {
         {
             id: 12,
             nombre:"",
-            username:"",
+            apellido:"",
+            nombreDeUsuario:"",
             email:"",
             contraseña:"",
             fechaDeNacimiento:"",
