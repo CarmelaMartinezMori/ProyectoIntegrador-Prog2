@@ -5,9 +5,11 @@ let indexController = require('../controllers/indexController');
 /* GET home page. */
 router.get('/', indexController.index);
 
-router.get('/detallePost', function(req, res, next){
-  res.render('detallePost', {title : "Express"});
-});
+router.get('/detallePost', indexController.detail);
+
+//router.get('/detallePost', function(req, res, next){
+  //res.render('detallePost', {title : "Express"});
+//});
 
 //router.get('/detaillePost/:id', indexController.detail);
 
