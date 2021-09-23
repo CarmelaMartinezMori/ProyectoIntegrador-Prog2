@@ -6,14 +6,6 @@ const home = {
             imagen : "comida4.jpeg",
             pie : "Sanguchito",
             fotoPerfil : "foto10.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
 
         },
         {
@@ -22,14 +14,7 @@ const home = {
             pie : "Tequeños",
             imagen : "comida5.jpeg",
             fotoPerfil : "foto2.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
+            
         },
         {
             id : 2,
@@ -37,14 +22,7 @@ const home = {
             pie : "Asado negro",
             imagen : "comida6.jpeg",
             fotoPerfil : "foto3.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
+            
         },
         {
             id : 3,
@@ -52,14 +30,7 @@ const home = {
             pie : "Pizza",
             imagen : "comida3.jpeg",
             fotoPerfil : "foto4.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
+            
         },
         {
             id : 4,
@@ -67,14 +38,7 @@ const home = {
             pie : "Sushi",
             imagen : "comida2.jpeg",
             fotoPerfil : "foto5.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
+            
         },
         {
             id : 5,
@@ -82,14 +46,7 @@ const home = {
             pie : "Hamburguesa",
             imagen : "comida1.jpeg",
             fotoPerfil : "foto6.jpeg",
-            primerComentador : "Lucas Tax",
-            primerComentario : "Oh, se ve delicioso!",
-            segundoComentador : "Maria Becerra",
-            segundoComentario : "No mientas, eso es photoshop",
-            tercerComentador : "Maluma",
-            tercerComentario : "Con ese plato puedes chantajear a Shakira, jaja",
-            cuartoComentador : "Obama",
-            cuartoComentario : "Hay que darle de comer a quienes mas lo necesitan.",
+            
         },
 ]
 }
