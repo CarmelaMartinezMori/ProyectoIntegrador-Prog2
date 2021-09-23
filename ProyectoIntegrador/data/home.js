@@ -5,6 +5,7 @@ const home = {
             usuario : "Agustin Patio",
             imagen : "comida4.jpeg",
             pie : "Sanguchito",
+            fotoPerfil : "",
             primerComentador : "Lucas Tax",
             primerComentario : "Oh, se ve delicioso!",
             segundoComentador : "Maria Becerra",
