@@ -1,24 +1,22 @@
-const home = {
+const posteos = {
     posts : [
         {
             id : 0,
-            usuario : "Juana Lopez",
+            nombreDeUsuario : "juanitalopez",
             imagen : "comida4.jpeg",
             pie : "Sanguchito",
             fotoPerfil : "foto10.jpeg",
-
         },
         {
             id : 1,
-            usuario : "Martin Palacio",
+            nombreDeUsuario : "martinpalacio99",
             pie : "Tequeños",
             imagen : "comida5.jpeg",
             fotoPerfil : "foto2.jpeg",
-            
         },
         {
             id : 2,
-            usuario : "Justina Dominguez",
+            nombreDeUsuario : "justidominguezz",
             pie : "Asado negro",
             imagen : "comida6.jpeg",
             fotoPerfil : "foto3.jpeg",
@@ -26,7 +24,7 @@ const home = {
         },
         {
             id : 3,
-            usuario : "Charly Pintos",
+            nombreDeUsuario : "charlyypintos",
             pie : "Pizza",
             imagen : "comida3.jpeg",
             fotoPerfil : "foto4.jpeg",
@@ -34,7 +32,7 @@ const home = {
         },
         {
             id : 4,
-            usuario : "Latin_lover_0101",
+            nombreDeUsuario : "latin_lover_0101",
             pie : "Sushi",
             imagen : "comida2.jpeg",
             fotoPerfil : "foto5.jpeg",
@@ -42,7 +40,7 @@ const home = {
         },
         {
             id : 5,
-            usuario : "Jorge Luis Borges",
+            nombreDeUsuario : "Jorge Luis Borges",
             pie : "Hamburguesa",
             imagen : "comida1.jpeg",
             fotoPerfil : "foto6.jpeg",
@@ -51,4 +49,4 @@ const home = {
 ]
 }
 
-module.exports = home;
+module.exports = posteos;

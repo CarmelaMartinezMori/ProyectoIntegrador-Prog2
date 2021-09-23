@@ -1,11 +1,11 @@
-const home = require('../data/home');
+const posteos = require('../data/posteos');
 
 const indexController = {
     index: function(req, res, next) {
-        res.render('index', {users: home})
+        res.render('index', {home: posteos})
     },
     detail: function(req, res, next) {
-        res.render('detallePost', {users: home})
+        res.render('detallePost', {home: posteos})
     }, 
 }
 
