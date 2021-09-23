@@ -5,7 +5,7 @@ let indexController = require('../controllers/indexController');
 /* GET home page. */
 router.get('/', indexController.index);
 
-router.get('/', indexController.detail);
+router.get('/detallePost', indexController.detail);
 
 //router.get('/detallePost', function(req, res, next){
   //res.render('detallePost', {title : "Express"});

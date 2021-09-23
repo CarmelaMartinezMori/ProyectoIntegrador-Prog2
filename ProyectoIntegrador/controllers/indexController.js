@@ -5,7 +5,7 @@ const indexController = {
         res.render('index', {users: home})
     },
     detail: function(req, res, next) {
-        res.render('detail', {users: home})
+        res.render('detallePost', {users: home})
     }, 
 }
 
