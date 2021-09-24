@@ -41,84 +41,74 @@ const usuarios = {
         },
         {
             id: 4,
-            nombre:"Jorge Luis",
+            nombre:"Manolo",
             apellido:"Devalle",
             nombreDeUsuario:"latin_lover_0101",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            email:"mlover@hotmail.com",
+            contraseña:"Manolo1234",
+            fechaDeNacimiento:"05/07/2000",
+            fotoPerfil: "foto5.jpeg"
         },
         {
             id: 5,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Juan Luis",
+            apellido:"Borges",
+            nombreDeUsuario:"jlborges",
+            email:"juanluisb86@hotmail.com",
+            contraseña:"Juanluis1234",
+            fechaDeNacimiento:"24/08/1999",
+            fotoPerfil: "foto6.jpeg"
         },
         {
             id: 6,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Carlos",
+            apellido:"Ramirez",
+            nombreDeUsuario:"cramirez",
+            email:"carlitos@gmail.com",
+            contraseña:"Carlos1234",
+            fechaDeNacimiento:"24/03/1997",
+            fotoPerfil: "foto6.jpeg"
         },
         {
             id: 7,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Martina",
+            apellido:"Suarez",
+            nombreDeUsuario:"martuuu_",
+            email:"martinasuarez@gmail.com",
+            contraseña:"Martu1234",
+            fechaDeNacimiento:"11/02/2002",
+            fotoPerfil: "foto10.jpeg"
         },
         {
             id: 8,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Sofia",
+            apellido:"Vazquez",
+            nombreDeUsuario:"sofivazquex",
+            email:"sofiaav@hotmail.com",
+            contraseña:"Sofia1234",
+            fechaDeNacimiento:"27/11/1997",
+            fotoPerfil: "foto10.jpeg"
         },
         {
             id: 9,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Santiago",
+            apellido:"Pons",
+            nombreDeUsuario:"santipons",
+            email:"santiagopons@gmail.com",
+            contraseña:"Santi1234",
+            fechaDeNacimiento:"10/08/1999",
+            fotoPerfil: "foto6.jpeg"
         },
         {
             id: 10,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
+            nombre:"Carlos",
+            apellido:"Baute",
+            nombreDeUsuario:"carlitos",
+            email:"carlosbaute@gmail.com",
+            contraseña:"Carlos1234",
+            fechaDeNacimiento:"08/03/1974",
+            fotoPerfil: "carlosbaute2.jpeg"
         },
-        {
-            id: 11,
-            nombre:"",
-            apellido:"",
-            nombreDeUsuario:"",
-            email:"",
-            contraseña:"",
-            fechaDeNacimiento:"",
-            fotoPerfil: ""
-        }
     ]
 };
 

@@ -4,7 +4,6 @@ const comentarios = {
             texto: "Que rico",
             usuario_id: 0, 
             creacion: "23/09/2021",
-            //Agregar nombre usuario?
         },
         {
             id: 1,
@@ -32,46 +31,106 @@ const comentarios = {
         },
         {
             id: 5,
-            texto: "Que rico",
+            texto: "Que ricura por favorr",
             usuario_id: 5, 
             creacion: "23/09/2021"
         },
         {
             id: 6,
-            texto: "Que rico",
+            texto: "Se ve espectacular",
             usuario_id: 6, 
             creacion: "23/09/2021"
         },
         {
             id: 7,
-            texto: "Que rico",
+            texto: "Queremos comer",
             usuario_id: 7, 
             creacion: "23/09/2021"
         },
         {
             id: 8,
-            texto: "Que rico",
+            texto: "Me encantaría la receta!!!",
             usuario_id: 8, 
             creacion: "23/09/2021"
         },
         {
             id: 9,
-            texto: "Que rico",
+            texto: "Que rico! Dónde se consigue?",
             usuario_id: 9, 
             creacion: "23/09/2021"
         },
         {
             id: 10,
-            texto: "Que rico",
+            texto: "La receta?",
             usuario_id: 10, 
             creacion: "23/09/2021"
         },
         {
             id: 11,
-            texto: "Que rico",
-            usuario_id: 11, 
+            texto: "ARTE PURO!!",
+            usuario_id: 0, 
             creacion: "23/09/2021"
-        }
+        },
+        {
+            id: 11,
+            texto: "Quiero recetaa!! ",
+            usuario_id: 1, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Wow. Esto es genial.",
+            usuario_id: 2, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Yum",
+            usuario_id: 3, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Muy bueno, pero tienen todas las personas la igualdad de acceder a recursos?",
+            usuario_id: 4, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Hola, saludos",
+            usuario_id: 5, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Que deliciaa",
+            usuario_id: 6, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Que genial esta foto",
+            usuario_id: 7, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "que bueno se ve!",
+            usuario_id: 8, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Que hermoso, bendiciones ",
+            usuario_id: 9, 
+            creacion: "23/09/2021"
+        },
+        {
+            id: 11,
+            texto: "Quierooo!!!",
+            usuario_id: 10, 
+            creacion: "23/09/2021"
+        },
     ]
 };
 

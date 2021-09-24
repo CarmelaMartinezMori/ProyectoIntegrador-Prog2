@@ -3,22 +3,22 @@ const posteos = {
         {
             id : 0,
             nombreDeUsuario : "juanitalopez",
-            imagen : "comida4.jpeg",
+            imagen : "comida0.jpg",
             pie : "Sanguchito",
             fotoPerfil : "foto10.jpeg",
         },
         {
             id : 1,
-            nombreDeUsuario : "martinpalacio99",
-            pie : "Tequeños",
-            imagen : "comida5.jpeg",
+            nombreDeUsuario : "martinpalacio",
+            pie : "Tequeños <3",
+            imagen : "comida1.jpeg",
             fotoPerfil : "foto2.jpeg",
         },
         {
             id : 2,
-            nombreDeUsuario : "justidominguezz",
-            pie : "Asado negro",
-            imagen : "comida6.jpeg",
+            nombreDeUsuario : "justidominguez",
+            pie : "Una sopita",
+            imagen : "comida2.jpg",
             fotoPerfil : "foto3.jpeg",
             
         },
@@ -26,23 +26,54 @@ const posteos = {
             id : 3,
             nombreDeUsuario : "charlyypintos",
             pie : "Pizza",
-            imagen : "comida3.jpeg",
+            imagen : "comida3.jpg",
             fotoPerfil : "foto4.jpeg",
             
         },
         {
             id : 4,
-            nombreDeUsuario : "latin_lover_0101",
+            nombreDeUsuario : "latin_lover_010",
             pie : "Sushi",
-            imagen : "comida2.jpeg",
+            imagen : "comida4.jpg",
             fotoPerfil : "foto5.jpeg",
             
         },
         {
             id : 5,
-            nombreDeUsuario : "Jorge Luis Borges",
+            nombreDeUsuario : "jlborges",
             pie : "Hamburguesa",
-            imagen : "comida1.jpeg",
+            imagen : "comida5.jpg",
+            fotoPerfil : "foto6.jpeg",
+            
+        },{
+            id : 6,
+            nombreDeUsuario : "cramirez",
+            pie : "Cocinando nuevas cosas",
+            imagen : "comida6.jpg",
+            fotoPerfil : "foto6.jpeg",
+            
+        },
+        {
+            id : 7,
+            nombreDeUsuario : "martuuu_",
+            pie : "Cupcakes de vainilla",
+            imagen : "comida7.jpg",
+            fotoPerfil : "foto10.jpeg",
+            
+        },
+        {
+            id : 7,
+            nombreDeUsuario : "sofivazquex",
+            pie : "Pasando el calor",
+            imagen : "comida8.jpg",
+            fotoPerfil : "foto10.jpeg",
+            
+        },
+        {
+            id : 7,
+            nombreDeUsuario : "santipons",
+            pie : "Pancakes caseros",
+            imagen : "comida9.jpg",
             fotoPerfil : "foto6.jpeg",
             
         },
