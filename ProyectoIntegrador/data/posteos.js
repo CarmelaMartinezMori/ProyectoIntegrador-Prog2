@@ -5,21 +5,21 @@ const posteos = {
             nombreDeUsuario : "juanitalopez",
             imagen : "comida0.jpg",
             pie : "Sanguchito",
-            fotoPerfil : "foto10.jpeg",
+            fotoPerfil : "foto1.jpg",
         },
         {
             id : 1,
             nombreDeUsuario : "martinpalacio",
             pie : "Tequeños <3",
             imagen : "comida1.jpeg",
-            fotoPerfil : "foto2.jpeg",
+            fotoPerfil : "foto2.jpg",
         },
         {
             id : 2,
             nombreDeUsuario : "justidominguez",
             pie : "Una sopita",
             imagen : "comida2.jpg",
-            fotoPerfil : "foto3.jpeg",
+            fotoPerfil : "foto3.jpg",
             
         },
         {
@@ -27,7 +27,7 @@ const posteos = {
             nombreDeUsuario : "charlyypintos",
             pie : "Pizza",
             imagen : "comida3.jpg",
-            fotoPerfil : "foto4.jpeg",
+            fotoPerfil : "foto4.jpg",
             
         },
         {
@@ -35,7 +35,7 @@ const posteos = {
             nombreDeUsuario : "latin_lover_010",
             pie : "Sushi",
             imagen : "comida4.jpg",
-            fotoPerfil : "foto5.jpeg",
+            fotoPerfil : "foto5.jpg",
             
         },
         {
@@ -43,14 +43,14 @@ const posteos = {
             nombreDeUsuario : "jlborges",
             pie : "Hamburguesa",
             imagen : "comida5.jpg",
-            fotoPerfil : "foto6.jpeg",
+            fotoPerfil : "foto6.jpg",
             
         },{
             id : 6,
             nombreDeUsuario : "cramirez",
             pie : "Cocinando nuevas cosas",
             imagen : "comida6.jpg",
-            fotoPerfil : "foto6.jpeg",
+            fotoPerfil : "foto7.jpg",
             
         },
         {
@@ -58,7 +58,7 @@ const posteos = {
             nombreDeUsuario : "martuuu_",
             pie : "Cupcakes de vainilla",
             imagen : "comida7.jpg",
-            fotoPerfil : "foto10.jpeg",
+            fotoPerfil : "foto8.jpg",
             
         },
         {
@@ -66,7 +66,7 @@ const posteos = {
             nombreDeUsuario : "sofivazquex",
             pie : "Pasando el calor",
             imagen : "comida8.jpg",
-            fotoPerfil : "foto10.jpeg",
+            fotoPerfil : "foto9.jpg",
             
         },
         {
@@ -74,7 +74,7 @@ const posteos = {
             nombreDeUsuario : "santipons",
             pie : "Pancakes caseros",
             imagen : "comida9.jpg",
-            fotoPerfil : "foto6.jpeg",
+            fotoPerfil : "foto10.jpg",
             
         },
 ]

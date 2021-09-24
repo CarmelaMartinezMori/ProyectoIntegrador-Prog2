@@ -7,7 +7,7 @@ const usuarios = {
             email:"juanalo@gmail.com",
             contraseña:"Juana1234",
             fechaDeNacimiento:"03/10/2001",
-            fotoPerfil: "foto10.jpeg"
+            fotoPerfil: "foto1.jpg"
         },
         {
             id: 1,
@@ -17,7 +17,7 @@ const usuarios = {
             email:"marpalacio@hotmail.com",
             contraseña:"Martin1234",
             fechaDeNacimiento:"14/07/1999",
-            fotoPerfil: "foto2.jpeg"
+            fotoPerfil: "foto2.jpg"
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ const usuarios = {
             email:"pintoscharly@gmail.com",
             contraseña:"Charly1234",
             fechaDeNacimiento:"03/10/1997",
-            fotoPerfil: "foto3.jpeg"
+            fotoPerfil: "foto4.jpg"
         },
         {
             id: 3,
@@ -37,7 +37,7 @@ const usuarios = {
             email:"justinadom@gmail.com",
             contraseña:"Justina1234",
             fechaDeNacimiento:"19/12/2000",
-            fotoPerfil: "foto3.jpeg"
+            fotoPerfil: "foto3.jpg"
         },
         {
             id: 4,
@@ -47,7 +47,7 @@ const usuarios = {
             email:"mlover@hotmail.com",
             contraseña:"Manolo1234",
             fechaDeNacimiento:"05/07/2000",
-            fotoPerfil: "foto5.jpeg"
+            fotoPerfil: "foto5.jpg"
         },
         {
             id: 5,
@@ -57,7 +57,7 @@ const usuarios = {
             email:"juanluisb86@hotmail.com",
             contraseña:"Juanluis1234",
             fechaDeNacimiento:"24/08/1999",
-            fotoPerfil: "foto6.jpeg"
+            fotoPerfil: "foto6.jpg"
         },
         {
             id: 6,
@@ -67,7 +67,7 @@ const usuarios = {
             email:"carlitos@gmail.com",
             contraseña:"Carlos1234",
             fechaDeNacimiento:"24/03/1997",
-            fotoPerfil: "foto6.jpeg"
+            fotoPerfil: "foto7.jpg"
         },
         {
             id: 7,
@@ -77,7 +77,7 @@ const usuarios = {
             email:"martinasuarez@gmail.com",
             contraseña:"Martu1234",
             fechaDeNacimiento:"11/02/2002",
-            fotoPerfil: "foto10.jpeg"
+            fotoPerfil: "foto8.jpg"
         },
         {
             id: 8,
@@ -87,7 +87,7 @@ const usuarios = {
             email:"sofiaav@hotmail.com",
             contraseña:"Sofia1234",
             fechaDeNacimiento:"27/11/1997",
-            fotoPerfil: "foto10.jpeg"
+            fotoPerfil: "foto9.jpg"
         },
         {
             id: 9,
@@ -97,7 +97,7 @@ const usuarios = {
             email:"santiagopons@gmail.com",
             contraseña:"Santi1234",
             fechaDeNacimiento:"10/08/1999",
-            fotoPerfil: "foto6.jpeg"
+            fotoPerfil: "foto10.jpg"
         },
         {
             id: 10,
