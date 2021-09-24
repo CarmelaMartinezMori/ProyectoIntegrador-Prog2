@@ -62,7 +62,7 @@ const posteos = {
             
         },
         {
-            id : 7,
+            id : 8,
             nombreDeUsuario : "sofivazquex",
             pie : "Pasando el calor",
             imagen : "comida8.jpg",
@@ -70,7 +70,7 @@ const posteos = {
             
         },
         {
-            id : 7,
+            id : 9,
             nombreDeUsuario : "santipons",
             pie : "Pancakes caseros",
             imagen : "comida9.jpg",
