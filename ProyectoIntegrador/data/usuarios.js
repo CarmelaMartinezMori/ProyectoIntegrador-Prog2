@@ -99,17 +99,6 @@ const usuarios = {
             fotoPerfil: "foto10.jpg",
             celular: 153586007
         },
-        {
-            id: 10,
-            nombre:"Carlos",
-            apellido:"Baute",
-            nombreDeUsuario:"carlitos",
-            email:"carlosbaute@gmail.com",
-            contraseña:"Carlos1234",
-            fechaDeNacimiento:"08/03/1974",
-            fotoPerfil: "carlosbaute2.jpeg",
-            celular: 153586008
-        },
         {   id: 10,
             nombre:"Juana",
             apellido:"Lopez",
@@ -119,7 +108,18 @@ const usuarios = {
             fechaDeNacimiento:"03/10/2001",
             fotoPerfil: "foto1.jpg",
             celular: 153586009  
-        }
+        },
+        {
+            id: 11,
+            nombre:"Carlos",
+            apellido:"Baute",
+            nombreDeUsuario:"carlitos",
+            email:"carlosbaute@gmail.com",
+            contraseña:"Carlos1234",
+            fechaDeNacimiento:"08/03/1974",
+            fotoPerfil: "carlosbaute2.jpeg",
+            celular: 153586008
+        },
     ]
 };
 
