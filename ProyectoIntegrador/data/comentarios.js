@@ -1,38 +1,32 @@
 const comentarios = {
     comentar:[
-        {   id: 0,
-            texto: "Que rico",
-            usuarios_id: 0, 
-            posteos_id: 0,
-            creacion: "23/09/2021",
-        },
         {
             id: 1,
             texto: "Oh, se ve delicioso!",
             usuarios_id: 1, 
-            posteos_id: 0,
-            creacion: "23/09/2021"
+            posteos_id: 10,
+            creacion: "25/09/2021"
         },
         {
             id: 2,
             texto: "No mientas, eso es photoshop",
             usuarios_id: 2, 
-            posteos_id: 0,
-            creacion: "23/09/2021"
+            posteos_id: 10,
+            creacion: "25/09/2021"
         },
         {
             id: 3,
             texto: "Con ese plato puedes chantajear a Shakira, jaja",
             usuarios_id: 3, 
-            posteos_id: 0,
-            creacion: "23/09/2021"
+            posteos_id: 10,
+            creacion: "25/09/2021"
         },
         {
             id: 4,
             texto: "Hay que darle de comer a quienes mas lo necesitan.",
             usuarios_id: 4, 
-            posteos_id: 0,
-            creacion: "23/09/2021"
+            posteos_id: 10,
+            creacion: "25/09/2021"
         },
         {
             id: 5,
@@ -46,22 +40,21 @@ const comentarios = {
             texto: "Se ve espectacular",
             usuarios_id: 6, 
             posteos_id: 1,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 7,
             texto: "Queremos comer",
             usuarios_id: 7, 
             posteos_id: 1,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 8,
             texto: "Me encantaría la receta!!!",
             posteos_id: 1,
             usuarios_id: 8, 
-
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 9,
@@ -80,9 +73,9 @@ const comentarios = {
         {
             id: 12,
             texto: "ARTE PURO!!",
-            usuarios_id: 0, 
+            usuarios_id: 10, 
             posteos_id: 2,
-            creacion: "23/09/2021"
+            creacion: "22/09/2021"
         },
         {
             id: 13,
@@ -124,105 +117,105 @@ const comentarios = {
             texto: "Que deliciaa",
             usuarios_id: 6, 
             posteos_id: 4,
-            creacion: "23/09/2021"
+            creacion: "26/09/2021"
         },
         {
             id: 19,
             texto: "Que genial esta foto",
             usuarios_id: 7, 
             posteos_id: 4,
-            creacion: "23/09/2021"
+            creacion: "26/09/2021"
         },
         {
             id: 20,
             texto: "que bueno se ve!",
             usuarios_id: 8, 
             posteos_id: 4,
-            creacion: "23/09/2021"
+            creacion: "26/09/2021"
         },
         {
             id: 21,
             texto: "Que hermoso, bendiciones ",
             usuarios_id: 9, 
             posteos_id: 4,
-            creacion: "23/09/2021"
+            creacion: "26/09/2021"
         },
         {
             id: 22,
             texto: "Quierooo!!!",
             usuarios_id: 10, 
             posteos_id: 5,
-            creacion: "23/09/2021"
+            creacion: "27/09/2021"
         },
         {
             id: 23,
             texto: "Sabroso",
-            usuarios_id: 0,
+            usuarios_id: 10,
             posteos_id: 5, 
-            creacion: "23/09/2021"
+            creacion: "27/09/2021"
         },
         {
             id: 24,
             texto: "Espectacularr!! ",
             usuarios_id: 1, 
             posteos_id: 5,
-            creacion: "23/09/2021"
+            creacion: "27/09/2021"
         },
         {
             id: 25,
             texto: "que ricooo",
             usuarios_id: 2, 
             posteos_id: 5,
-            creacion: "23/09/2021"
+            creacion: "27/09/2021"
         },
         {
             id: 26,
             texto: "Estoy esperando la receta! :)",
             usuarios_id: 3, 
             posteos_id: 6,
-            creacion: "23/09/2021"
+            creacion: "25/09/2021"
         },
         {
             id: 27,
             texto: "Me mueroo, que rico",
             usuarios_id: 4, 
             posteos_id: 6,
-            creacion: "23/09/2021"
+            creacion: "25/09/2021"
         },
         {
             id: 28,
             texto: "Dónde puedo conseguir esto?!",
             usuarios_id: 5, 
             posteos_id: 6,
-            creacion: "23/09/2021"
+            creacion: "25/09/2021"
         },
         {
             id: 29,
             texto: "Me Encanta <3",
             usuarios_id: 6, 
             posteos_id: 6,
-            creacion: "23/09/2021"
+            creacion: "26/09/2021"
         },
         {
             id: 30,
             texto: "Divina la foto",
             usuarios_id: 7, 
             posteos_id: 7,
-            creacion: "23/09/2021"
+            creacion: "21/09/2021"
         },
         {
             id: 31,
             texto: "Woww, me muero por probar eso",
             usuarios_id: 8, 
             posteos_id: 7,
-            creacion: "23/09/2021"
+            creacion: "21/09/2021"
         },
         {
             id: 32,
             texto: "muy bueno.",
             usuarios_id: 9, 
             posteos_id: 7,
-            creacion: "23/09/2021"
+            creacion: "22/09/2021"
         },
         {
             id: 33,
@@ -234,7 +227,7 @@ const comentarios = {
         {
             id: 34,
             texto: "Ríquisimo!",
-            usuarios_id: 0, 
+            usuarios_id: 10, 
             posteos_id: 8,
             creacion: "23/09/2021"
         },
@@ -271,35 +264,35 @@ const comentarios = {
             texto: "Genial!!!",
             usuarios_id: 5, 
             posteos_id: 9,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 40,
             texto: "muy buenas tus publicaciones",
             usuarios_id: 6, 
             posteos_id: 9,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 41,
             texto: "qué restaurante es?",
             usuarios_id: 7, 
             posteos_id: 9,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 42,
             texto: "Woww",
             usuarios_id: 8, 
             posteos_id: 9,
-            creacion: "23/09/2021"
+            creacion: "24/09/2021"
         },
         {
             id: 43,
             texto: "Exquisitoo",
             usuarios_id: 9, 
-            posteos_id: 0,
-            creacion: "23/09/2021"
+            posteos_id: 10,
+            creacion: "24/09/2021"
         },
         {
             id: 44,
@@ -307,6 +300,12 @@ const comentarios = {
             usuarios_id: 10, 
             posteos_id: 1,
             creacion: "23/09/2021"
+        },
+        {   id: 45,
+            texto: "Que rico",
+            usuarios_id: 10, 
+            posteos_id: 10,
+            creacion: "25/09/2021",
         },
     ]
 };

@@ -1,15 +1,5 @@
 const usuarios = {
     datos:[
-        {   id: 0,
-            nombre:"Juana",
-            apellido:"Lopez",
-            nombreDeUsuario:"juanitalopez",
-            email:"juanalo@gmail.com",
-            contraseña:"Juana1234",
-            fechaDeNacimiento:"03/10/2001",
-            fotoPerfil: "foto1.jpg",
-            celular: "153586009"  
-        },
         {
             id: 1,
             nombre:"Martin",
@@ -19,7 +9,7 @@ const usuarios = {
             contraseña:"Martin1234",
             fechaDeNacimiento:"14/07/1999",
             fotoPerfil: "foto2.jpg",
-            celular:"153586000",
+            celular: 153586000
         },
         {
             id: 2,
@@ -30,7 +20,7 @@ const usuarios = {
             contraseña:"Charly1234",
             fechaDeNacimiento:"03/10/1997",
             fotoPerfil: "foto4.jpg",
-            celular: "153586001"
+            celular: 153586001
         },
         {
             id: 3,
@@ -41,7 +31,7 @@ const usuarios = {
             contraseña:"Justina1234",
             fechaDeNacimiento:"19/12/2000",
             fotoPerfil: "foto3.jpg",
-            celular:"153586001"
+            celular: 153586001
         },
         {
             id: 4,
@@ -52,18 +42,18 @@ const usuarios = {
             contraseña:"Manolo1234",
             fechaDeNacimiento:"05/07/2000",
             fotoPerfil: "foto5.jpg",
-            celular:"153586002"
+            celular: 153586002
         },
         {
             id: 5,
-            nombre:"Juan Luis",
+            nombre:"Jorge Luis",
             apellido:"Borges",
             nombreDeUsuario:"jlborges",
             email:"juanluisb86@hotmail.com",
             contraseña:"Juanluis1234",
             fechaDeNacimiento:"24/08/1999",
             fotoPerfil: "foto6.jpg",
-            celular:"153586003"
+            celular: 153586003
         },
         {
             id: 6,
@@ -74,7 +64,7 @@ const usuarios = {
             contraseña:"Carlos1234",
             fechaDeNacimiento:"24/03/1997",
             fotoPerfil: "foto7.jpg",
-            celular:"153586004"
+            celular: 153586004
         },
         {
             id: 7,
@@ -85,7 +75,7 @@ const usuarios = {
             contraseña:"Martu1234",
             fechaDeNacimiento:"11/02/2002",
             fotoPerfil: "foto8.jpg",
-            celular:"153586005"
+            celular: 153586005
         },
         {
             id: 8,
@@ -96,7 +86,7 @@ const usuarios = {
             contraseña:"Sofia1234",
             fechaDeNacimiento:"27/11/1997",
             fotoPerfil: "foto9.jpg",
-            celular:"153586006"
+            celular: 153586006
         },
         {
             id: 9,
@@ -107,7 +97,7 @@ const usuarios = {
             contraseña:"Santi1234",
             fechaDeNacimiento:"10/08/1999",
             fotoPerfil: "foto10.jpg",
-            celular:"153586007"
+            celular: 153586007
         },
         {
             id: 10,
@@ -118,8 +108,18 @@ const usuarios = {
             contraseña:"Carlos1234",
             fechaDeNacimiento:"08/03/1974",
             fotoPerfil: "carlosbaute2.jpeg",
-            celular:"153586008"
+            celular: 153586008
         },
+        {   id: 10,
+            nombre:"Juana",
+            apellido:"Lopez",
+            nombreDeUsuario:"juanitalopez",
+            email:"juanalo@gmail.com",
+            contraseña:"Juana1234",
+            fechaDeNacimiento:"03/10/2001",
+            fotoPerfil: "foto1.jpg",
+            celular: 153586009  
+        }
     ]
 };
 

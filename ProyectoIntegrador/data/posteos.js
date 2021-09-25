@@ -1,14 +1,6 @@
 const posteos = {
     posts : [
-        {
-            id : 0,
-            nombreDeUsuario : "juanitalopez",
-            imagen : "comida0.jpg",
-            pie : "Sanguchito",
-            fotoPerfil : "foto1.jpg",
-            fecha: "25/09/2021",
-            usuarios_id: 0
-        },
+        
         {
             id : 1,
             nombreDeUsuario : "martinpalacio",
@@ -88,6 +80,15 @@ const posteos = {
             fotoPerfil : "foto10.jpg",
             fecha: "24/09/2021",
             usuarios_id: 9
+        },
+        {
+            id : 10,
+            nombreDeUsuario : "juanitalopez",
+            pie : "Sanguchito",
+            imagen : "comida0.jpg",
+            fotoPerfil : "foto1.jpg",
+            fecha: "25/09/2021",
+            usuarios_id: 10
         },
 ]
 }
