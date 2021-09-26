@@ -13,18 +13,19 @@ celular INT NOT NULL
 
 CREATE TABLE posteos (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-nombreDeUsuario VARCHAR (100) uNIQUE NOT NULL,
+nombreDeUsuario VARCHAR (100) UNIQUE NOT NULL,
 pie VARCHAR (500) NOT NULL,
 imagen VARCHAR (200) NOT NULL,
 fotoPerfil VARCHAR (200) NOT NULL,
 fecha DATE NOT NULL,
-
 usuarios_id INT UNSIGNED NOT NULL,
+
 FOREIGN KEY (usuarios_id) REFERENCES usuarios (id)
 );
 
 CREATE TABLE comentarios (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+nombreDeUsuario VARCHAR (100) NOT NULL,
 texto VARCHAR (500) NOT NULL,
 usuarios_id INT UNSIGNED NOT NULL,
 posteos_id INT UNSIGNED NOT NULL,
@@ -83,90 +84,90 @@ VALUES (DEFAULT, 'juanitalopez', 'Sanguchito', 'comida0.jpg', 'foto1.jpg', '2021
 
 
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Oh, se ve delicioso!', 1, 10, '2021-09-25');
+VALUES (DEFAULT, 'martinpalacio', 'Oh, se ve delicioso!', 1, 10, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'No mientas, eso es photoshop', 2, 10, '2021-09-25');
+VALUES (DEFAULT, 'charlyypintos' , 'No mientas, eso es photoshop', 2, 10, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Con ese plato puedes chantajear a Shakira, jaja', 3, 10, '2021-09-25');
+VALUES (DEFAULT, 'justidominguezz', 'Con ese plato puedes chantajear a Shakira, jaja', 3, 10, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Hay que darle de comer a quienes mas lo necesitan.', 4, 10, '2021-09-25');
+VALUES (DEFAULT, 'latin_lover_0101' , 'Hay que darle de comer a quienes mas lo necesitan.', 4, 10, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que ricura por favorr', 5, 1, '2021-09-23');
+VALUES (DEFAULT, 'jlborges' , 'Que ricura por favorr', 5, 1, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Se ve espectacular', 6, 1, '2021-09-24');
+VALUES (DEFAULT, 'cramirez' , 'Se ve espectacular', 6, 1, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Queremos comer', 7, 1, '2021-09-24');
+VALUES (DEFAULT, 'martuuu_' , 'Queremos comer', 7, 1, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Me encantaría la receta!!!', 8, 1, '2021-09-24');
+VALUES (DEFAULT, 'sofivazquex', 'Me encantaría la receta!!!', 8, 1, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que rico! Dónde se consigue?', 9, 2, '2021-09-23');
+VALUES (DEFAULT, 'santipons', 'Que rico! Dónde se consigue?', 9, 2, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'La receta?', 10, 2, '2021-09-23');
+VALUES (DEFAULT, 'juanitalopez', 'La receta?', 10, 2, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'ARTE PURO!!', 11, 2, '2021-09-22');
+VALUES (DEFAULT, 'carlitos', 'ARTE PURO!!', 11, 2, '2021-09-22');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Quiero recetaa!! ', 1, 2, '2021-09-23');
+VALUES (DEFAULT, 'martinpalacio', 'Quiero recetaa!! ', 1, 2, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Wow. Esto es genial.', 2, 3, '2021-09-23');
+VALUES (DEFAULT, 'charlyypintos', 'Wow. Esto es genial.', 2, 3, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Yum', 3, 3, '2021-09-23');
+VALUES (DEFAULT, 'justidominguezz', 'Yum', 3, 3, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Muy bueno, pero tienen todas las personas la igualdad de acceder a recursos?', 4, 3, '2021-09-23');
+VALUES (DEFAULT, 'latin_lover_0101', 'Muy bueno, pero tienen todas las personas la igualdad de acceder a recursos?', 4, 3, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Hola, saludos', 5, 3, '2021-09-23');
+VALUES (DEFAULT, 'jlborges', 'Hola, saludos', 5, 3, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que deliciaa', 6, 4, '2021-09-26');
+VALUES (DEFAULT, 'cramirez', 'Que deliciaa', 6, 4, '2021-09-26');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que genial esta foto', 7, 4, '2021-09-26');
+VALUES (DEFAULT, 'martuuu_', 'Que genial esta foto', 7, 4, '2021-09-26');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'que bueno se ve!', 8, 4, '2021-09-26');
+VALUES (DEFAULT, 'sofivazquex', 'que bueno se ve!', 8, 4, '2021-09-26');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que hermoso, bendiciones ', 9, 4, '2021-09-26');
+VALUES (DEFAULT, 'santipons', 'Que hermoso, bendiciones ', 9, 4, '2021-09-26');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Quierooo!!!', 10, 5, '2021-09-27');
+VALUES (DEFAULT, 'juanitalopez', 'Quierooo!!!', 10, 5, '2021-09-27');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Sabroso', 11, 5, '2021-09-27');
+VALUES (DEFAULT, 'carlitos', 'Sabroso', 11, 5, '2021-09-27');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Espectacularr!! ', 1, 5, '2021-09-27');
+VALUES (DEFAULT, 'martinpalacio', 'Espectacularr!! ', 1, 5, '2021-09-27');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'que ricooo', 2, 5, '2021-09-27');
+VALUES (DEFAULT, 'charlyypintos', 'que ricooo', 2, 5, '2021-09-27');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Estoy esperando la receta! :)', 3, 6, '2021-09-25');
+VALUES (DEFAULT, 'justidominguezz', 'Estoy esperando la receta! :)', 3, 6, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Me mueroo, que rico', 4, 6, '2021-09-25');
+VALUES (DEFAULT, 'latin_lover_0101', 'Me mueroo, que rico', 4, 6, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Dónde puedo conseguir esto?!', 5, 6, '2021-09-25');
+VALUES (DEFAULT, 'jlborges', 'Dónde puedo conseguir esto?!', 5, 6, '2021-09-25');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Me Encanta <3', 6, 6, '2021-09-26');
+VALUES (DEFAULT, 'cramirez', 'Me Encanta <3', 6, 6, '2021-09-26');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Divina la foto', 7, 7, '2021-09-21');
+VALUES (DEFAULT, 'martuuu_', 'Divina la foto', 7, 7, '2021-09-21');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Woww, me muero por probar eso', 8, 7, '2021-09-21');
+VALUES (DEFAULT, 'sofivazquex', 'Woww, me muero por probar eso', 8, 7, '2021-09-21');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'muy bueno', 9, 7, '2021-09-22');
+VALUES (DEFAULT, 'santipons', 'muy bueno', 9, 7, '2021-09-22');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Espectacular es poco!!!', 10, 7, '2021-09-23');
+VALUES (DEFAULT, 'juanitalopez', 'Espectacular es poco!!!', 10, 7, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Ríquisimo!', 11, 8, '2021-09-23');
+VALUES (DEFAULT, 'carlitos', 'Ríquisimo!', 11, 8, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Muy bueno', 1, 8, '2021-09-23');
+VALUES (DEFAULT, 'martinpalacio', 'Muy bueno', 1, 8, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'un manjar', 2, 8, '2021-09-23');
+VALUES (DEFAULT, 'charlyypintos', 'un manjar', 2, 8, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'me dio hambre', 3, 8, '2021-09-23');
+VALUES (DEFAULT, 'justidominguezz', 'me dio hambre', 3, 8, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'que bien se ve esto', 4, 8, '2021-09-23');
+VALUES (DEFAULT, 'latin_lover_0101', 'que bien se ve esto', 4, 8, '2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Genial!!!', 5, 9, '2021-09-24');
+VALUES (DEFAULT, 'jlborges', 'Genial!!!', 5, 9, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'muy buenas tus publicaciones', 6, 9, '2021-09-24');
+VALUES (DEFAULT, 'cramirez', 'muy buenas tus publicaciones', 6, 9, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'qué restaurante es?', 7, 9, '2021-09-24');
+VALUES (DEFAULT, 'martuuu_', 'qué restaurante es?', 7, 9, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Woww', 8, 9, '2021-09-24');
+VALUES (DEFAULT, 'sofivazquex', 'Woww', 8, 9, '2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Exquisitoo', 9, 10,'2021-09-24');
+VALUES (DEFAULT, 'santipons', 'Exquisitoo', 9, 10,'2021-09-24');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Me tentaste, ya me voy a comprar para comer', 10, 1,'2021-09-23');
+VALUES (DEFAULT, 'juanitalopez', 'Me tentaste, ya me voy a comprar para comer', 10, 1,'2021-09-23');
 INSERT INTO comentarios
-VALUES (DEFAULT, 'Que rico', 11, 10,'2021-09-25');
+VALUES (DEFAULT, 'carlitos', 'Que rico', 11, 10,'2021-09-25');

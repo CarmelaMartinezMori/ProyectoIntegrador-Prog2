@@ -2,7 +2,7 @@ const comentario = {
     comentar:[
         {
             id: 1,
-            creador: "Jorge Tevez",
+            nombreDeUsuario: "martinpalacio",
             texto: "Oh, se ve delicioso!",
             usuarios_id: 1, 
             posteos_id: 10,
@@ -10,7 +10,7 @@ const comentario = {
         },
         {
             id: 2,
-            creador: "Carolina Lemke",
+            nombreDeUsuario: "charlyypintos",
             texto: "No mientas, eso es photoshop",
             usuarios_id: 2, 
             posteos_id: 10,
@@ -18,7 +18,7 @@ const comentario = {
         },
         {
             id: 3,
-            creador: "Juan Charles",
+            nombreDeUsuario: "justidominguezz",
             texto: "Con ese plato puedes chantajear a Shakira, jaja",
             usuarios_id: 3, 
             posteos_id: 10,
@@ -26,7 +26,7 @@ const comentario = {
         },
         {
             id: 4,
-            creador: "Canario Escobar",
+            nombreDeUsuario: "latin_lover_0101",
             texto: "Hay que darle de comer a quienes mas lo necesitan.",
             usuarios_id: 4, 
             posteos_id: 10,
@@ -34,7 +34,7 @@ const comentario = {
         },
         {
             id: 5,
-            creador: "Christian Burgoz",
+            nombreDeUsuario: "jlborges",
             texto: "Que ricura por favorr",
             usuarios_id: 5, 
             posteos_id: 1,
@@ -42,7 +42,7 @@ const comentario = {
         },
         {
             id: 6,
-            creador: "La rosalia",
+            nombreDeUsuario: "cramirez",
             texto: "Se ve espectacular",
             usuarios_id: 6, 
             posteos_id: 1,
@@ -50,7 +50,7 @@ const comentario = {
         },
         {
             id: 7,
-            creador: "Manuel Bitcoin",
+            nombreDeUsuario: "martuuu_",
             texto: "Queremos comer",
             usuarios_id: 7, 
             posteos_id: 1,
@@ -58,7 +58,7 @@ const comentario = {
         },
         {
             id: 8,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "sofivazquex",
             texto: "Me encantaría la receta!!!",
             usuarios_id: 8, 
             posteos_id: 1,
@@ -66,7 +66,7 @@ const comentario = {
         },
         {
             id: 9,
-            creador: "Peter Ferguson",
+            nombreDeUsuario: "santipons",
             texto: "Que rico! Dónde se consigue?",
             usuarios_id: 9, 
             posteos_id: 2,
@@ -74,7 +74,7 @@ const comentario = {
         },
         {
             id: 10,
-            creador: "Charles Manson",
+            nombreDeUsuario: "juanitalopez",
             texto: "La receta?",
             usuarios_id: 10, 
             posteos_id: 2,
@@ -82,7 +82,7 @@ const comentario = {
         },
         {
             id: 11,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "carlitos",
             texto: "ARTE PURO!!",
             usuarios_id: 11, 
             posteos_id: 2,
@@ -90,7 +90,7 @@ const comentario = {
         },
         {
             id: 12,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martinpalacio",
             texto: "Quiero recetaa!! ",
             usuarios_id: 1, 
             posteos_id: 2,
@@ -98,7 +98,7 @@ const comentario = {
         },
         {
             id: 13,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "charlyypintos",
             texto: "Wow. Esto es genial.",
             usuarios_id: 2,
             posteos_id: 3, 
@@ -106,7 +106,7 @@ const comentario = {
         },
         {
             id: 14,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "justidominguezz",
             texto: "Yum",
             usuarios_id: 3, 
             posteos_id: 3,
@@ -114,7 +114,7 @@ const comentario = {
         },
         {
             id: 15,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "latin_lover_0101",
             texto: "Muy bueno, pero tienen todas las personas la igualdad de acceder a recursos?",
             usuarios_id: 4, 
             posteos_id: 3,
@@ -122,7 +122,7 @@ const comentario = {
         },
         {
             id: 16,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "jlborges",
             texto: "Hola, saludos",
             usuarios_id: 5, 
             posteos_id: 3,
@@ -130,7 +130,7 @@ const comentario = {
         },
         {
             id: 17,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "cramirez",
             texto: "Que deliciaa",
             usuarios_id: 6, 
             posteos_id: 4,
@@ -138,7 +138,7 @@ const comentario = {
         },
         {
             id: 18,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martuuu_",
             texto: "Que genial esta foto",
             usuarios_id: 7, 
             posteos_id: 4,
@@ -146,7 +146,7 @@ const comentario = {
         },
         {
             id: 19,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "sofivazquex",
             texto: "que bueno se ve!",
             usuarios_id: 8, 
             posteos_id: 4,
@@ -154,7 +154,7 @@ const comentario = {
         },
         {
             id: 20,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "santipons",
             texto: "Que hermoso, bendiciones ",
             usuarios_id: 9, 
             posteos_id: 4,
@@ -162,7 +162,7 @@ const comentario = {
         },
         {
             id: 21,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "juanitalopez",
             texto: "Quierooo!!!",
             usuarios_id: 10, 
             posteos_id: 5,
@@ -170,7 +170,7 @@ const comentario = {
         },
         {
             id: 22,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "carlitos",
             texto: "Sabroso",
             usuarios_id: 11,
             posteos_id: 5, 
@@ -178,7 +178,7 @@ const comentario = {
         },
         {
             id: 23,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martinpalacio",
             texto: "Espectacularr!! ",
             usuarios_id: 1, 
             posteos_id: 5,
@@ -186,7 +186,7 @@ const comentario = {
         },
         {
             id: 24,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "charlyypintos",
             texto: "que ricooo",
             usuarios_id: 2, 
             posteos_id: 5,
@@ -194,7 +194,7 @@ const comentario = {
         },
         {
             id: 25,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "justidominguezz",
             texto: "Estoy esperando la receta! :)",
             usuarios_id: 3, 
             posteos_id: 6,
@@ -202,7 +202,7 @@ const comentario = {
         },
         {
             id: 26,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "latin_lover_0101",
             texto: "Me mueroo, que rico",
             usuarios_id: 4, 
             posteos_id: 6,
@@ -210,7 +210,7 @@ const comentario = {
         },
         {
             id: 27,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "jlborges",
             texto: "Dónde puedo conseguir esto?!",
             usuarios_id: 5, 
             posteos_id: 6,
@@ -218,7 +218,7 @@ const comentario = {
         },
         {
             id: 28,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "cramirez",
             texto: "Me Encanta <3",
             usuarios_id: 6, 
             posteos_id: 6,
@@ -226,7 +226,7 @@ const comentario = {
         },
         {
             id: 29,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martuuu_",
             texto: "Divina la foto",
             usuarios_id: 7, 
             posteos_id: 7,
@@ -234,7 +234,7 @@ const comentario = {
         },
         {
             id: 30,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "sofivazquex",
             texto: "Woww, me muero por probar eso",
             usuarios_id: 8, 
             posteos_id: 7,
@@ -242,7 +242,7 @@ const comentario = {
         },
         {
             id: 31,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "santipons",
             texto: "muy bueno.",
             usuarios_id: 9, 
             posteos_id: 7,
@@ -250,7 +250,7 @@ const comentario = {
         },
         {
             id: 32,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "juanitalopez",
             texto: "Espectacular es poco!!!",
             usuarios_id: 10, 
             posteos_id: 7,
@@ -258,7 +258,7 @@ const comentario = {
         },
         {
             id: 33,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "carlitos",
             texto: "Ríquisimo!",
             usuarios_id: 11, 
             posteos_id: 8,
@@ -266,7 +266,7 @@ const comentario = {
         },
         {
             id: 34,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martinpalacio",
             texto: "Muy bueno",
             usuarios_id: 1, 
             posteos_id: 8,
@@ -274,7 +274,7 @@ const comentario = {
         },
         {
             id: 35,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "charlyypintos",
             texto: "un manjar",
             usuarios_id: 2, 
             posteos_id: 8,
@@ -282,7 +282,7 @@ const comentario = {
         },
         {
             id: 36,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "justidominguezz",
             texto: "me dio hambre",
             usuarios_id: 3, 
             posteos_id: 8,
@@ -290,7 +290,7 @@ const comentario = {
         },
         {
             id: 37,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "latin_lover_0101",
             texto: "que bien se ve esto",
             usuarios_id: 4,
             posteos_id: 8,
@@ -298,7 +298,7 @@ const comentario = {
         },
         {
             id: 38,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "jlborges",
             texto: "Genial!!!",
             usuarios_id: 5, 
             posteos_id: 9,
@@ -306,7 +306,7 @@ const comentario = {
         },
         {
             id: 39,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "cramirez",
             texto: "muy buenas tus publicaciones",
             usuarios_id: 6, 
             posteos_id: 9,
@@ -314,7 +314,7 @@ const comentario = {
         },
         {
             id: 40,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "martuuu_",
             texto: "qué restaurante es?",
             usuarios_id: 7, 
             posteos_id: 9,
@@ -322,7 +322,7 @@ const comentario = {
         },
         {
             id: 41,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "sofivazquex",
             texto: "Woww",
             usuarios_id: 8, 
             posteos_id: 9,
@@ -330,7 +330,7 @@ const comentario = {
         },
         {
             id: 42,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "santipons",
             texto: "Exquisitoo",
             usuarios_id: 9, 
             posteos_id: 10,
@@ -338,14 +338,14 @@ const comentario = {
         },
         {
             id: 43,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "juanitalopez",
             texto: "Me tentaste, ya me voy a comprar para comer",
             usuarios_id: 10, 
             posteos_id: 1,
             creacion: "23/09/2021"
         },
         {   id: 44,
-            creador: "Emiliano Martinez",
+            nombreDeUsuario: "carlitos",
             texto: "Que rico",
             usuarios_id: 11, 
             posteos_id: 10,
