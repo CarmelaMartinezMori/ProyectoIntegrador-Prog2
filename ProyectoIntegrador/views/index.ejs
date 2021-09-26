@@ -13,13 +13,14 @@
                    
                     <% for (let i=0; i<home.posts.length; i ++){ %>
                     <article class="post uk-card-default uk-flex uk-flex-column">
+                        <% for (let i=0; i<data.datos.length; i ++){ %>
                         <div class="info-usuario uk-flex ">
                             <div>
-                                <img src="/images/fotosPerfiles/<%= home.posts[i].fotoPerfil%>" alt="" width="55px">
+                                <img src="/images/fotosPerfiles/<%= data.datos[i].fotoPerfil%>" alt="" width="55px">
                             </div>
-                    
-                            <h4><a href="/detalleUsuario"><%= home.posts[i].nombreDeUsuario%></a></h4>
+                            <h4><a href="/detalleUsuario"><%= data.datos[i].nombreDeUsuario%></a></h4>
                         </div>
+                        <% } %>
                         <div class="post-body uk-flex uk-flex-center">
                             <a href="/detallePost ">
                                 <img src="/images/imagenesPerfil/<%= home.posts[i].imagen%>" alt="">
@@ -40,14 +41,12 @@
                         <div class="post-comentarios">
                             <h6>Comentarios</h6>
                             <ul>
+                                <% for (let i=0; i<coment.comentar.length; i ++){ %>
                                 <li>
-                                    <a href="/detalleUsuario"><%= home.posts[i].primerComentador %></a>
-                                    <p><%= home.posts[i].primerComentario %></p>
+                                    <a href="/detalleUsuario"><%= coment.comentar[i].creacion %></a>
+                                    <p><%= coment.comentar[i].texto %></p>
                                 </li>
-                                <li>
-                                    <a href="/detalleUsuario"><%= home.posts[i].segundoComentador %></a>
-                                    <p><%= home.posts[i].segundoComentario %></p>
-                                </li>
+                                <% } %>
                                 <a href="">Ver más...</a>
                             </ul>
                         </div>

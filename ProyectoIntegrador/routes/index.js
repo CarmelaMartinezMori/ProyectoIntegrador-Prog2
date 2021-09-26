@@ -4,6 +4,8 @@ let indexController = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', indexController.index);
+router.get('/', indexController.comentar);
+router.get('/', indexController.usuario);
 
 router.get('/detallePost', indexController.detail);
 
