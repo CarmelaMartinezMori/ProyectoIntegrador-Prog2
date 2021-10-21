@@ -4,15 +4,16 @@ let indexController = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', indexController.index);
+
 //router.get('/', indexController.comentar);
 //router.get('/', indexController.usuario);
 
-router.get('/detallePost', indexController.detail);
+//router.get('/detallePost', indexController.detail);
 
 router.get('/login', function(req, res, next){
   res.render('login', {title : "Express"});
 });
-router.get('/registracion', function(req, res, next){
+router.post('/registracion', function(req, res, next){
   res.render('registracion', {title : "Express"});
 });
 router.get('/resultadoBusqueda', function(req, res, next){
