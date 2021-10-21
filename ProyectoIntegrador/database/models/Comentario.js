@@ -1,0 +1,38 @@
+module.exports = function(sequelize, dataTypes){
+
+    //Definir un alias
+    let alias = 'Comentario'; //Con este alias sequelize va a identificar internamente al archivo de modelo. 
+
+    //Describir la configuración de las columnas de la tabla
+    let cols = {
+        id:{
+            autoIncrement: true,
+            primaryKey: true,
+            type: dataTypes.INTEGER,
+        },
+        nombreDeUsuario:{
+            type: dataTypes.STRING,
+        },
+        texto:{
+            type: dataTypes.STRING,
+        },
+        usuarios_id:{
+            type: dataTypes.INTEGER,
+        },
+        posteos_id:{
+            type: dataTypes.INTEGER,
+        },
+        creacion:{
+            type: dataTypes.DATE,
+        }
+    }
+    let config = {
+        tableName: 'comentarios', 
+        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+        underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
+    }
+
+    const Comentario = sequelize.define(alias, cols, config);
+
+    return Comentario;
+}
