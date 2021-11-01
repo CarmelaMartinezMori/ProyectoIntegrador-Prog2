@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let indexController = require('../controllers/indexController');
+const userController = require('../controllers/userController');
 
 /* GET home page. */
 router.get('/', indexController.index);
@@ -13,9 +14,10 @@ router.get('/', indexController.index);
 router.get('/login', function(req, res, next){
   res.render('login', {title : "Express"});
 });
-router.post('/registracion', function(req, res, next){
-  res.render('registracion', {title : "Express"});
-});
+
+router.get('/registracion', userController.index);
+router.post('/registracion', userController.email);
+
 router.get('/resultadoBusqueda', function(req, res, next){
   res.render('resultadoBusqueda', {title : "Express"});
 });
