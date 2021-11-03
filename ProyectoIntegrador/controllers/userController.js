@@ -13,6 +13,12 @@ const userController = {
         } else if(req.body.email != ""){
             return res.redirect('/');
         }
+    },
+    contraseña : function(req, res){
+        if(req.body.contraseña == ""){
+            errors.message = "la contrasenia no puede estar vacia"
+        } if else(req.body.contraseña )
+
     }
 
 }
