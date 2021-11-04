@@ -20,7 +20,6 @@ const userController = {
         if(req.body.contraseña == ""){
             errors.message = "la contrasenia no puede estar vacia"
         } else if (req.body.contraseña);
-
     },
 }
 
