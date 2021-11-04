@@ -3,9 +3,9 @@ let db = require('../database/models')
 let bcrypt = require('bcryptjs')
 
 const userController = {
-    index : function(req, res){
+    register: function(req, res){
         res.render('registracion')
-    },     
+    },   
     email : function(req, res){
         let errors = {};
         if(req.body.email == ""){

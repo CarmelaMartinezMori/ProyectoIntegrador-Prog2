@@ -31,7 +31,8 @@ const indexController = {
             return res.send(error);
             
         })
-    }
+    }, 
+    
 }
 
 module.exports = indexController;

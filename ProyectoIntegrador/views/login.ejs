@@ -37,13 +37,13 @@
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                <form action="" method="post">
+        
                 <h2>INICIAR SESIÓN</h2>
-                <form>
+                <form action="/login" method="post">
                     <label for="fname">Nombre de usuario</label><br>
-                    <input type="text" id="fname" name="fname"><br>
+                    <input type="text" id="fname" name="nombreDeUsuario"><br>
                     <label for="lname">Contraseña</label><br>
-                    <input type="password" id="lname" name="lname"><br>
+                    <input type="password" id="lname" name="contraseña"><br>
                     <script>
                         function alerta(){
                             alert("¡Bienvenido devuelta!");
@@ -53,7 +53,7 @@
                         <input class="btn btn btn-info" type="button" onclick="alerta()" value="Iniciar sesión">
                     </a>
                 </form>
-            </form>
+           
             </div>
         </div>
     </main>
