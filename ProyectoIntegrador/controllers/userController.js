@@ -1,9 +1,11 @@
 // Para que el form de registro no este vacio
+let db = require('../database/models')
+let bcrypt = require('bcryptjs')
 
 const userController = {
     index : function(req, res){
         res.render('registracion')
-    },
+    },     
     email : function(req, res){
         let errors = {};
         if(req.body.email == ""){
@@ -17,10 +19,9 @@ const userController = {
     contraseña : function(req, res){
         if(req.body.contraseña == ""){
             errors.message = "la contrasenia no puede estar vacia"
-        } if else(req.body.contraseña )
+        } else if (req.body.contraseña);
 
-    }
-
+    },
 }
 
 module.exports = userController;
