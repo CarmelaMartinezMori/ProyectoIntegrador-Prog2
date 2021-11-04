@@ -8,30 +8,36 @@ module.exports = function(sequelize, dataTypes){
         id:{
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         nombreDeUsuario:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         pie:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         imagen:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         fotoPerfil:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         fecha:{
-            type: dataTypes.DATE,
+            type: dataTypes.DATE
         },
         usuarios_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         }
     }
     let config = {
         tableName: 'posteos', 
-        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+        timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
     }
 
     const Posteos = sequelize.define(alias, cols, config);

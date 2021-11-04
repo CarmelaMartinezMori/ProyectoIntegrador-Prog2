@@ -8,27 +8,33 @@ module.exports = function(sequelize, dataTypes){
         id:{
             autoIncrement: true,
             primaryKey: true,
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         nombreDeUsuario:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         texto:{
-            type: dataTypes.STRING,
+            type: dataTypes.STRING
         },
         usuarios_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         posteos_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
         },
         creacion:{
-            type: dataTypes.DATE,
+            type: dataTypes.DATE
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         }
     }
     let config = {
         tableName: 'comentarios', 
-        timestamps: false, //Si la tabla no tiene los campos created_at y updated_at      
+        timestamps: true, //Si la tabla no tiene los campos created_at y updated_at      
     }
 
     const Comentario = sequelize.define(alias, cols, config);
