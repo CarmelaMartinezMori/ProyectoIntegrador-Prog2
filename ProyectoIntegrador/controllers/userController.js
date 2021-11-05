@@ -36,7 +36,7 @@ const userController = {
     processLogin: function(req,res){
         usuario.findOne({
             where: {
-                nombreDeUsuario: req.body.nombreDeUsuario
+                email: req.body.email
             }
         })
         .then(user => {
