@@ -9,25 +9,78 @@ const userController = {
     },   
     // ALMACENAR LOS DATOS DEL NUEVO USUARIO A LA BASE DE DATOS
     store: function(req, res){
-        let contraseñaEncriptada = bcrypt.hashSync(req.body.contraseña, 10)
+        let contraseñaEncriptada =  bcrypt.hashSync(req.body.contraseña, 10)
         console.log(contraseñaEncriptada)
-        usuario.create({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            nombreDeUsuario: req.body.nombreDeUsuario,
-            email: req.body.email,
-            fechaDeNacimiento: req.body.fechaDeNacimiento,
-            celular: req.body.celular,
-            fotoPerfil: req.body.fotoPerfil,
-            contraseña: contraseñaEncriptada
-        })
-        .then(user => {
-            res.redirect('/')
-        })
-        .catch(err => {
-            console.log(err);
-            res.send(err)
-        })
+        let errors = {}
+        if (req.body.nombre == "") {
+            errors.message = "El nombre de usuario es obligatorio";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.email == "") {
+            errors.message = "El email es obligatorio";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.file == null) {
+            errors.message = "La foto es obligatoria";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.celular == "") {
+            errors.message = "El celular es obligatorio";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.fechaDeNacimiento == null) {
+            errors.message = "La fecha de nacimiento es obligatoria";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.contraseña == "") {
+            errors.message = "La contraseña es obligatoria";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.contraseña.length < 3) {
+            errors.message = "La contraseña es muy corta";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else{
+            usuario.findOne({
+                where: [{ email: req.body.email }]
+            })
+            .then(resultado => {
+                if (resultado != undefined) {
+                    errors.message = "Ya existe un usuario con ese email";
+                    res.locals.errors = errors;
+                    res.render('registracion');
+                } else {
+                    usuario.findOne({
+                        where: [{ nombre: req.body.nombre }]
+                    })
+                    .then (resultado2 =>{
+                        if (resultado2 != undefined) {       
+                            errors.message = "Ya existe un usuario con este nombre";
+                            res.locals.errors = errors;
+                            res.render('registracion');
+                        } else {
+                            usuario.create({
+                                nombre: req.body.nombre,
+                                apellido: req.body.apellido,
+                                nombreDeUsuario: req.body.nombreDeUsuario,
+                                email: req.body.email,
+                                fechaDeNacimiento: req.body.fechaDeNacimiento,
+                                celular: req.body.celular,
+                                fotoPerfil: req.file.filename,
+                                contraseña: contraseñaEncriptada
+                            })
+                            .then(user => {
+                                res.redirect('/')
+                            })
+                            .catch(err => {
+                                console.log(err);
+                                res.send(err)
+                            })
+                        }
+                    })
+                }
+            })
+        }
     },
     //RENDERIZA LA VISTA DE LOGIN
     login: function(req,res){

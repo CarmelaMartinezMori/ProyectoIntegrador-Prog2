@@ -39,7 +39,7 @@
                 
                     
                     <h2>REGISTRATE</h2>
-                    <form method="post" action="/registracion">
+                    <form method="post" action="/registracion" enctype = "multipart/form-data">
                         <label for="fname">E-mail</label><br>
                         <input type="text" id="email" name="email"><br>
                         <% if(locals.errors){ %>
