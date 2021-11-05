@@ -9,12 +9,7 @@ router.get('/', indexController.index);
 
 //router.get('/detallePost', indexController.detail);
 
-
-
-
-router.get('/resultadoBusqueda', function(req, res, next){
-  res.render('resultadoBusqueda', {title : "Express"});
-});
+router.get('/resultadoBusqueda', indexController.search);
 
 router.get('/miperfil', function(req, res, next){
   res.render('miperfil', {title : "Express"});

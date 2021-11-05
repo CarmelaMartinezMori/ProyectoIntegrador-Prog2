@@ -41,24 +41,26 @@
                     <h2>REGISTRATE</h2>
                     <form method="post" action="/registracion">
                         <label for="fname">E-mail</label><br>
-                        <input type="text" id="fname" name="email"><br>
+                        <input type="text" id="email" name="email"><br>
                         <% if(locals.errors){ %>
                             <p class= "error" > <%= errors.message %> </p>
                         <% } %>
                         <label for="fname">Nombre</label><br>
-                        <input type="text" id="fname" name="nombre"><br>
+                        <input type="text" id="nombre" name="nombre"><br>
                         <label for="fname">Apellido</label><br>
-                        <input type="text" id="fname" name="apellido"><br>
+                        <input type="text" id="apellido" name="apellido"><br>
                         <label for="fname">Nombre de usuario</label><br>
-                        <input type="text" id="fname" name="nombreDeUsuario"><br>
+                        <input type="text" id="nombreDeUsuario" name="nombreDeUsuario"><br>
                         <label for="fname">Fecha de nacimiento</label><br>
-                        <input type="date" id="fname" name="fechaDeNacimiento"><br>
+                        <input type="date" id="fechaDeNacimiento" name="fechaDeNacimiento"><br>
                         <label for="fname">Celular</label><br>
-                        <input type="number" id="fname" name="celular"><br>
+                        <input type="number" id="celular" name="celular"><br>
                         <label for="lname">Contraseña</label><br>
-                        <input type="password" id="lname" name="contraseña"><br>
+                        <input type="password" id="contraseña" name="contraseña"><br>
                         <label for="lname">Confirmar contraseña</label><br>
-                        <input type="password" id="lname" name="contraseña"><br>
+                        <input type="password" id="contraseña" name="contraseña"><br>
+                        <label for="fname">Elegir foto de perfil</label><br>
+                        <input type="file" id="fotoPerfil" name="fotoPerfil"><br>
                         <script>
 							function alerta(){
 								alert("¡Felicidades, te registraste exitosamente!");
