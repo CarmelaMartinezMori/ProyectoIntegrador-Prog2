@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
     }
   }); 
   
-  const upload = multer({storage: storage});  
+const upload = multer({storage: storage});  
 
 router.get('/login', userController.login);
 router.post('/login', userController.processLogin);

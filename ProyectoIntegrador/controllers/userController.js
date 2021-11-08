@@ -9,8 +9,8 @@ const userController = {
     },   
     // ALMACENAR LOS DATOS DEL NUEVO USUARIO A LA BASE DE DATOS
     store: function(req, res){
-        let contraseñaEncriptada =  bcrypt.hashSync(req.body.contraseña, 10)
-        console.log(contraseñaEncriptada)
+        let contraseniaEncriptada =  bcrypt.hashSync(req.body.password, 10)
+        console.log(contraseniaEncriptada)
         let errors = {}
         if (req.body.nombre == "") {
             errors.message = "El nombre de usuario es obligatorio";
@@ -32,11 +32,11 @@ const userController = {
             errors.message = "La fecha de nacimiento es obligatoria";
             res.locals.errors = errors;
             res.render('registracion');
-        } else if (req.body.contraseña == "") {
+        } else if (req.body.password == "") {
             errors.message = "La contraseña es obligatoria";
             res.locals.errors = errors;
             res.render('registracion');
-        } else if (req.body.contraseña.length < 3) {
+        } else if (req.body.password.length < 3) {
             errors.message = "La contraseña es muy corta";
             res.locals.errors = errors;
             res.render('registracion');
@@ -51,7 +51,7 @@ const userController = {
                     res.render('registracion');
                 } else {
                     usuario.findOne({
-                        where: [{ nombre: req.body.nombre }]
+                        where: [{ nombreDeUsuario: req.body.nombreDeUsuario }]
                     })
                     .then (resultado2 =>{
                         if (resultado2 != undefined) {       
@@ -67,7 +67,7 @@ const userController = {
                                 fechaDeNacimiento: req.body.fechaDeNacimiento,
                                 celular: req.body.celular,
                                 fotoPerfil: req.file.filename,
-                                contraseña: contraseñaEncriptada
+                                password: contraseniaEncriptada
                             })
                             .then(user => {
                                 res.redirect('/')
@@ -79,7 +79,7 @@ const userController = {
                         }
                     })
                 }
-            })
+            }) 
         }
     },
     //RENDERIZA LA VISTA DE LOGIN
@@ -94,8 +94,8 @@ const userController = {
         })
         .then(user => {
             if(user != undefined){
-                let contraseñaCorrecta = bcrypt.compareSync(req.body.contraseña, user.contraseña)
-                if(contraseñaCorrecta == true){
+                let contraseniaCorrecta = bcrypt.compareSync(req.body.password, user.password)
+                if(contraseniaCorrecta == true){
                     res.send("Bienvenido al sitio")
                 }else {
                     res.send("Credenciales invalidas")
