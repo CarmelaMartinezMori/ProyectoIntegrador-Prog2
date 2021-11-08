@@ -86,26 +86,44 @@ const userController = {
     login: function(req,res){
         res.render('login')
     },
-    processLogin: function(req,res){
-        usuario.findOne({
+    processLogin: (req, res) => {
+        let filtro = {
             where: {
                 email: req.body.email
             }
-        })
-        .then(user => {
-            if(user != undefined){
-                let contraseniaCorrecta = bcrypt.compareSync(req.body.password, user.password)
-                if(contraseniaCorrecta == true){
-                    res.send("Bienvenido al sitio")
-                }else {
-                    res.send("Credenciales invalidas")
+        }
+        let erroresLogin = {}
+        usuario.findOne(filtro)
+            .then(usuario => {
+                if (usuario == null) {
+                    erroresLogin.message = "Usted no tiene una cuenta con este email";
+                    res.locals.erroresLogin = erroresLogin;
+                    res.render('login');
+                } else {
+                    if (bcrypt.compareSync(req.body.password, usuario.password)) {
+                        req.session.usuario = usuario.nombre;
+                        req.session.password = usuario.password;
+                        req.session.idUsuario = usuario.id;
+
+                        if (req.body.recordarme) {
+                            res.cookie("usuarios_id", usuario.id, {
+                                maxAge: 1000 * 60 * 60 * 24
+                            })
+
+                        }
+
+                    res.redirect("/")
+                    } else {
+                        erroresLogin.message = "Contraseña incorrecta";
+                        res.locals.erroresLogin = erroresLogin;
+                        res.render('login');
+                    }
                 }
-            }
-        })
-        .catch(err => {
-            console.log(err);
-            res.send(err)
-        })
+            })
+            .catch((error) => {
+                console.log("Error de conexion: " + error.message);
+                res.render('error', { error: "Error de conexion: " + error.message });
+            });
     },
 }
 
