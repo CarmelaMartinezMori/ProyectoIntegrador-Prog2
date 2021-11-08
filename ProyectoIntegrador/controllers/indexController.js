@@ -1,19 +1,8 @@
-/*
-const indexController = {
-    index: function(req, res, next) {
-        res.render('index', {home: posteos, data: usuarios, coment: comentario})
-    },
-    detail: function(req, res, next) {
-        res.render('detallePost', {home: posteos})
-    }, 
-}
-
-module.exports = indexController; */
-
 const db = require('../database/models');
 const posteo = db.Posteo; 
 const comentario = db.Comentario;
 const usuario = db.Usuario;
+
 const op = db.Sequelize.Op
 
 const indexController = {
@@ -38,7 +27,6 @@ const indexController = {
         posteo.findAll({
             where: [
                 {"pie":  {[op.like]:`%${search}%`}}
-                
             ]
         })
         .then (resultado => {

@@ -107,21 +107,6 @@ const userController = {
             res.send(err)
         })
     },
-    // email : function(req, res){
-    //     let errors = {};
-    //     if(req.body.email == ""){
-    //         errors.message = "email no puede estar vacio"; // Para que el form de registro no este vacio
-    //         res.locals.errors = errors;
-    //         return res.render('registracion');
-    //     } else if(req.body.email != ""){
-    //         return res.redirect('/');
-    //     }
-    // },
-    // contraseña : function(req, res){
-    //     if(req.body.contraseña == ""){
-    //         errors.message = "la contrasenia no puede estar vacia"
-    //     } else if (req.body.contraseña);
-    // },
 }
 
 module.exports = userController;
