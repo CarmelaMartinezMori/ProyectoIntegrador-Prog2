@@ -24,7 +24,7 @@ router.get('/login', userController.login);
 router.post('/login', userController.processLogin);
 
 router.get('/registracion', userController.register);
-router.post('/registracion', upload.single('fotoPerfil'), userController.store); //email
+router.post('/registracion', upload.single('fotoPerfil'), userController.store); //email check('email).isEmail()
 
 
 module.exports = router;

@@ -82,7 +82,7 @@ const userController = {
             }) 
         }
     },
-    //RENDERIZA LA VISTA DE LOGIN
+    //RENDERIZAR LA VISTA DE LOGIN
     login: function(req,res){
         res.render('login')
     },
@@ -101,18 +101,14 @@ const userController = {
                     res.render('login');
                 } else {
                     if (bcrypt.compareSync(req.body.password, usuario.password)) {
-                        req.session.usuario = usuario.nombre;
+                        req.session.usuario = usuario.email;
                         req.session.password = usuario.password;
                         req.session.idUsuario = usuario.id;
 
                         if (req.body.recordarme) {
-                            res.cookie("usuarios_id", usuario.id, {
-                                maxAge: 1000 * 60 * 60 * 24
-                            })
-
+                            res.cookie("usuarioId", usuario.id, {maxAge: 1000 * 60 * 60 * 24})
                         }
-
-                    res.redirect("/")
+                        res.redirect("/")
                     } else {
                         erroresLogin.message = "Contraseña incorrecta";
                         res.locals.erroresLogin = erroresLogin;
