@@ -16,6 +16,9 @@
                         <% } %>
                         <label for="fname">Nombre</label><br>
                         <input type="text" id="nombre" name="nombre"><br>
+                        <% if(locals.errors){ %>
+                            <p class= "error" > <%= errors.message %> </p>
+                        <% } %>
                         <label for="fname">Apellido</label><br>
                         <input type="text" id="apellido" name="apellido"><br>
                         <label for="fname">Nombre de usuario</label><br>
