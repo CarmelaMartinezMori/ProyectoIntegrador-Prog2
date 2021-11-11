@@ -129,6 +129,12 @@ const userController = {
                 res.render('error', { error: "Error de conexion: " + error.message });
             });
     },
+    //LOGOUT
+    logout: (req, res, next) => {
+        req.session.destroy();
+        res.clearCookie('usuarioId');
+        res.redirect('/');
+    }
 }
 
 module.exports = userController;
