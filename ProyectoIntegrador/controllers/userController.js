@@ -12,24 +12,28 @@ const userController = {
         let contraseniaEncriptada =  bcrypt.hashSync(req.body.password, 10)
         console.log(contraseniaEncriptada)
         let errors = {}
-        if (req.body.nombre == "") {
-            errors.message = "El nombre de usuario es obligatorio";
-            res.locals.errors = errors;
-            res.render('registracion');
-        } else if (req.body.email == "") {
+        if (req.body.email == "") {
             errors.message = "El email es obligatorio";
             res.locals.errors = errors;
             res.render('registracion');
-        } else if (req.file == null) {
-            errors.message = "La foto es obligatoria";
+        } else if (req.body.nombre == "") {
+            errors.message = "El nombre es obligatorio";
             res.locals.errors = errors;
             res.render('registracion');
-        } else if (req.body.celular == "") {
-            errors.message = "El celular es obligatorio";
+        } else if (req.body.apellido == "") {
+            errors.message = "El apellido es obligatorio";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.nombreDeUsuario == "") {
+            errors.message = "El nombre de usuario es obligatorio";
             res.locals.errors = errors;
             res.render('registracion');
         } else if (req.body.fechaDeNacimiento == null) {
             errors.message = "La fecha de nacimiento es obligatoria";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.body.celular == "") {
+            errors.message = "El celular es obligatorio";
             res.locals.errors = errors;
             res.render('registracion');
         } else if (req.body.password == "") {
@@ -38,6 +42,10 @@ const userController = {
             res.render('registracion');
         } else if (req.body.password.length < 3) {
             errors.message = "La contraseña es muy corta";
+            res.locals.errors = errors;
+            res.render('registracion');
+        } else if (req.file == null) {
+            errors.message = "La foto es obligatoria";
             res.locals.errors = errors;
             res.render('registracion');
         } else{
