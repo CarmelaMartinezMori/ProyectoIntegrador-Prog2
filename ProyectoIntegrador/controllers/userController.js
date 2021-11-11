@@ -104,7 +104,7 @@ const userController = {
         usuario.findOne(filtro)
             .then(usuario => {
                 if (usuario == null) {
-                    erroresLogin.message = "Usted no tiene una cuenta con este email";
+                    erroresLogin.message = "El email es incorrecto, intente de nuevo.";
                     res.locals.erroresLogin = erroresLogin;
                     res.render('login');
                 } else {
