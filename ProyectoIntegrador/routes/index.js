@@ -17,9 +17,7 @@ router.get('/login', function(req, res, next){
 
 router.get('/registracion', userController.index);
 router.post('/registracion', userController.email);
-router.post('/registracion', [
-  check('contraseña').isLength({min: 3}).withMessage('La contrasenia debe tener al menos 3 caracteres')
-] ,userController.contraseña);
+
 router.get('/resultadoBusqueda', function(req, res, next){
   res.render('resultadoBusqueda', {title : "Express"});
 });
