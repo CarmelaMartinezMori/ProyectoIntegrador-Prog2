@@ -6,7 +6,7 @@ const usuarios = {
             apellido:"Palacio",
             nombreDeUsuario:"martinpalacio",
             email:"marpalacio@hotmail.com",
-            contraseña:"Martin1234",
+            password:"Martin1234",
             fechaDeNacimiento:"14/07/1999",
             fotoPerfil: "foto2.jpg",
             celular: 153586000
@@ -17,7 +17,7 @@ const usuarios = {
             apellido:"Pintos",
             nombreDeUsuario:"charlyypintos",
             email:"pintoscharly@gmail.com",
-            contraseña:"Charly1234",
+            password:"Charly1234",
             fechaDeNacimiento:"03/10/1997",
             fotoPerfil: "foto4.jpg",
             celular: 153586001
@@ -28,7 +28,7 @@ const usuarios = {
             apellido:"Dominguez",
             nombreDeUsuario:"justidominguezz",
             email:"justinadom@gmail.com",
-            contraseña:"Justina1234",
+            password:"Justina1234",
             fechaDeNacimiento:"19/12/2000",
             fotoPerfil: "foto3.jpg",
             celular: 153586001
@@ -39,7 +39,7 @@ const usuarios = {
             apellido:"Devalle",
             nombreDeUsuario:"latin_lover_0101",
             email:"mlover@hotmail.com",
-            contraseña:"Manolo1234",
+            password:"Manolo1234",
             fechaDeNacimiento:"05/07/2000",
             fotoPerfil: "foto5.jpg",
             celular: 153586002
@@ -50,7 +50,7 @@ const usuarios = {
             apellido:"Borges",
             nombreDeUsuario:"jlborges",
             email:"juanluisb86@hotmail.com",
-            contraseña:"Juanluis1234",
+            password:"Juanluis1234",
             fechaDeNacimiento:"24/08/1999",
             fotoPerfil: "foto6.jpg",
             celular: 153586003
@@ -61,7 +61,7 @@ const usuarios = {
             apellido:"Ramirez",
             nombreDeUsuario:"cramirez",
             email:"carlitos@gmail.com",
-            contraseña:"Carlos1234",
+            password:"Carlos1234",
             fechaDeNacimiento:"24/03/1997",
             fotoPerfil: "foto7.jpg",
             celular: 153586004
@@ -72,7 +72,7 @@ const usuarios = {
             apellido:"Suarez",
             nombreDeUsuario:"martuuu_",
             email:"martinasuarez@gmail.com",
-            contraseña:"Martu1234",
+            password:"Martu1234",
             fechaDeNacimiento:"11/02/2002",
             fotoPerfil: "foto8.jpg",
             celular: 153586005
@@ -83,7 +83,7 @@ const usuarios = {
             apellido:"Vazquez",
             nombreDeUsuario:"sofivazquex",
             email:"sofiaav@hotmail.com",
-            contraseña:"Sofia1234",
+            password:"Sofia1234",
             fechaDeNacimiento:"27/11/1997",
             fotoPerfil: "foto9.jpg",
             celular: 153586006
@@ -94,7 +94,7 @@ const usuarios = {
             apellido:"Pons",
             nombreDeUsuario:"santipons",
             email:"santiagopons@gmail.com",
-            contraseña:"Santi1234",
+            password:"Santi1234",
             fechaDeNacimiento:"10/08/1999",
             fotoPerfil: "foto10.jpg",
             celular: 153586007
@@ -104,7 +104,7 @@ const usuarios = {
             apellido:"Lopez",
             nombreDeUsuario:"juanitalopez",
             email:"juanalo@gmail.com",
-            contraseña:"Juana1234",
+            password:"Juana1234",
             fechaDeNacimiento:"03/10/2001",
             fotoPerfil: "foto1.jpg",
             celular: 153586009  
@@ -115,7 +115,7 @@ const usuarios = {
             apellido:"Baute",
             nombreDeUsuario:"carlitos",
             email:"carlosbaute@gmail.com",
-            contraseña:"Carlos1234",
+            password:"Carlos1234",
             fechaDeNacimiento:"08/03/1974",
             fotoPerfil: "carlosbaute2.jpeg",
             celular: 153586008

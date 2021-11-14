@@ -9,7 +9,7 @@
         href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
         type="image/x-icon">
 
-    <link rel="stylesheet" href="css/resultadoBusqueda.css">
+
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/general.css">
@@ -29,37 +29,22 @@
 </head>
 
 <body>
-    <header class="uk-background-primary">
-        <section class=" uk-container uk-container-large">
-            <div class="">
-                <nav class="" uk-navbar>
-                    <div class="uk-navbar-left">
-                        <h2 class="logo"><a href="/">FalseBook</a></h2>
-                    </div>
-                    <div class="uk-navbar-center">
-                        <ul class="uk-flex uk-flex-between uk-flex-middle">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="addPost.html">Postear</a></li>
-                            <li><a href="/miperfil">Perfil</a></li>
-                        </ul>
-                    </div>
-                    <div class="uk-navbar-right">
-                        <a href="/agregarPost">Agregar post</a>
-                        <form action="" class="uk-search uk-search-default">
-                            <span uk-search-icon></span>
-                            <input type="search" class="uk-search-input" placeholder="Buscar...">
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </section>
-    </header>
+    <%- include('./partials/header')%>
+
 
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                
                 <h2>(Mostar resultados de busqueda)</h2>
+                <!-- SI NO ENCUENTRA RESULTADOS -->
+                    <% if (pie== undefined || pie==0) { %>
+                        <h2>No se encontraron resultados.</h2>
+                    <% } else {%>
+                        <div>
+                            <h2>Resultados de búsqueda:</h2>
+                        </div>
+                    <% } %>
 
             </div>
         </div>

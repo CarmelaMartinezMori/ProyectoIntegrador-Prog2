@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLoverz</title>
-    <link rel="icon"
-        href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
-        type="image/x-icon">
-    
-    <link rel="stylesheet" href="css/registracion.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/general.css">
-    
-    <!-- UiKit -->
-    <!-- <link rel="stylesheet" href="css/uikit.min.css">
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="js/uikit.min.js"></script> -->
-    <!-- UiKit -->
-    
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-    
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
-    
-        
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
-</head>
+    <%- include('./partials/head') %> 
 <body>
-    <%- include('./partials/headerDeslogueado')%>
+    <%- include('./partials/header')%>
 
     <main>
         <div class="uk-section uk-section-small">
-            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
-                
-                    
-                    <h2>REGISTRATE</h2>
-                    <form method="post" action="/registracion">
-                        <label for="fname">E-mail</label><br>
-                        <input type="text" id="fname" name="email"><br>
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">   
+                   
+                    <form method="post" action="/users/registracion" enctype= "multipart/form-data">
                         <% if(locals.errors){ %>
-                            <p class= "error" > <%= errors.message %> </p>
+                            <p class= "error" style="color: red;"> <%= errors.message %> </p>
                         <% } %>
-                        <label for="fname">Nombre</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="fname">Apellido</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="fname">Nombre de usuario</label><br>
-                        <input type="text" id="fname" name="fname"><br>
-                        <label for="fname">Fecha de nacimiento</label><br>
-                        <input type="date" id="fname" name="fname"><br>
-                        <label for="fname">Celular</label><br>
-                        <input type="number" id="fname" name="fname"><br>
-                        <label for="lname">Contraseña</label><br>
-                        <input type="password" id="lname" name="contraseña"><br>
-                        <label for="lname">Confirmar contraseña</label><br>
-                        <input type="password" id="lname" name="contraseña"><br>
-                        <script>
-							function alerta(){
-								alert("¡Felicidades, te registraste exitosamente!");
-							}
-						</script>
-                        <button>Registrarse</button>
-						<!-- <a href="/miperfil" class="boton">
-							<input class="btn btn btn-info" type="button" onclick="alerta()" value="Registrarse">
-						</a> -->
+                        
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: mail"></span>
+                                <input class="uk-input" type="email" name="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input class="uk-input" type="text" name="nombre" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user" ></span>
+                                <input class="uk-input" type="text" name="apellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                <input class="uk-input" type="text" name="nombreDeUsuario" placeholder="Nombre de Usuario">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                
+                                <input class="uk-input uk-form-width-medium" type="date" name="fechaDeNacimiento" >
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                                <input class="uk-input" type="text" name="celular" placeholder="Télefono">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                                <input class="uk-input" type="password" name="password" placeholder="Contraseña">
+                            </div>
+                        </div> 
+                        <div class="uk-margin">
+                            <div uk-form-custom>
+                                <input type="file" name="fotoPerfil">
+                                <button class="uk-button uk-button-default" type="button" tabindex="-1">Foto de Perfil</button>
+                            </div>
+                        </div>
+                        
+                        
+                       
+                        <p uk-margin>
+                            <button class="uk-button uk-button-default" type="submit">Registrarse</button>
+                        </p>
                     </form>
             
             </div>

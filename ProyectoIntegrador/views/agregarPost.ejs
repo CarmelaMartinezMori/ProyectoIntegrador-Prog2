@@ -4,17 +4,16 @@
     <%- include('./partials/head') %> 
 
 <body>
-    <%- include('./partials/headerLogueado') %> 
+    <%- include('./partials/header') %> 
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex">
-                <form action="" method="post">
                     <h2>NUEVA PUBLICACIÓN</h2>
-                    <form>
+                    <form action="/agregarPost" method="post">
                         <label for="fname">Elegir foto o video</label><br>
-                        <input type="file" id="fname" name="fname"><br>
+                        <input type="file" id="fname" name="agregarPost"><br>
                         <label for="fname">Escribe un pie de foto o video</label><br>
-                        <input type="text" id="fname" name="fname"><br>
+                        <input type="text" id="fname" name="pie"><br>
                 
                        
                        
@@ -27,9 +26,6 @@
 							}
 						</script>
                     </form>
-
-                </form>
-
             </div>
         </div>
     </main>
