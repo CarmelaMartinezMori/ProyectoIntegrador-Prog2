@@ -36,20 +36,28 @@
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
                
-                <h2>(Mostar resultados de busqueda)</h2>
+                <!-- <h2>(Mostar resultados de busqueda)</h2> -->
                 <!-- SI NO ENCUENTRA RESULTADOS -->
                     <% if (pie== undefined || pie==0) { %>
                         <h2>No se encontraron resultados.</h2>
                     <% } else {%>
                         <div>
-                            <h2>Resultados de búsqueda:</h2>
+                            <h2>Resultados de búsqueda: </h2>
+                            <div class="resultadosBusqueda">
+                                <% pie.forEach(element => {  %> 
+                                    <h3><%= element.pie %> </h3>
+                                    <img src="/images/imagenesPerfil/<%= element.imagen%>" alt="">
+                                <% }) %>
+                                
+                            </div>
                         </div>
                     <% } %>
-
+                    
+                     
             </div>
         </div>
     </main>
-
+    
     <%- include('./partials/footer')%>
 
 
