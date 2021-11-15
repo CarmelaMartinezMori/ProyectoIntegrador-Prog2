@@ -10,8 +10,16 @@ const op = db.Sequelize.Op
 const indexController = {
     //HOME
     index: function (req, res){
-        let posteos = posteo.findAll();
-        let comentarios = comentario.findAll();
+        let posteos = posteo.findAll({
+            order: [
+                ["createdAt", "DESC"]
+            ]
+        });
+        let comentarios = comentario.findAll({
+            order: [
+                ["createdAt", "DESC"]
+            ]
+        });
         
         Promise.all([posteos, comentarios])
         .then(([posteos, comentarios]) => {
@@ -23,6 +31,17 @@ const indexController = {
             
         })
     }, 
+    detail : function(req, res) {
+        posteo.findByPk(req.params.id)
+        .then(posteos => {
+            res.render("detallePost", {posteos : posteos});
+        })
+        .catch(error => {
+            console.log(error);
+            return res.send(error);
+        })
+
+    },
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;

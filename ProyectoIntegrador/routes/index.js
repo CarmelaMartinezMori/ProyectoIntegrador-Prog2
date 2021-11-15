@@ -5,9 +5,8 @@ let indexController = require('../controllers/indexController');
 
 /* GET home page. */
 router.get('/', indexController.index);
+router.get("/detallePost/:id", indexController.detail);
 
-
-//router.get('/detallePost', indexController.detail);
 
 router.get('/resultadoBusqueda', indexController.search);
 
