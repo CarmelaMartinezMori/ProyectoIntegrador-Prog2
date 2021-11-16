@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLoverz</title>
-    <link rel="icon"
-        href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
-        type="image/x-icon">
-
-
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/general.css">
-
-    <!-- UiKit -->
-    <!-- <link rel="stylesheet" href="css/uikit.min.css">
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="js/uikit.min.js"></script> -->
-    <!-- UiKit -->
-
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
-</head>
-
+    <!-- <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FoodLoverz</title>
+        <link rel="icon"
+            href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
+            type="image/x-icon">
+    
+    
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/general.css">
+    
+        <!-- UiKit -->
+        <!-- <link rel="stylesheet" href="css/uikit.min.css">
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/uikit.min.js"></script> -->
+        <!-- UiKit -->
+    
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+    
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+    </head> 
+<%- include('./partials/head') %> 
 <body>
     <%- include('./partials/header')%>
 
@@ -44,11 +44,50 @@
                         <div>
                             <h2>Resultados de búsqueda: </h2>
                             <div class="resultadosBusqueda">
+                             
+                   
                                 <% pie.forEach(element => {  %> 
-                                    <h3><%= element.pie %> </h3>
-                                    <img src="/images/imagenesPerfil/<%= element.imagen%>" alt="">
-                                <% }) %>
+                            
+                                    <main> 
+                                        <div class="uk-section uk-section-small">
+                                            <div class="uk-container uk-container-large uk-flex">
+                                                <section id="posts" class="uk-flex uk-flex-middle uk-flex-center uk-flex-column uk-child-width-1-2 uk-width-1-1">                                             
+                                                    <article class="post uk-card-default uk-flex uk-flex-column">
+                                                        <div class="info-usuario uk-flex ">
+                                                            <div>
+                                                                <img src="/images/fotosPerfiles/<%= element.fotoPerfil%>" alt="" width="55px">
+                                                            </div>
+                                                            <h4><a href="/detalleUsuario"><%=element.nombreDeUsuario%> </a></h4>
+                                                        </div>
+                                                        <div class="post-body uk-flex uk-flex-center">
+                                                            <a href="/detallePost ">
+                                                                <img src="/images/imagenesPerfil/<%= element.imagen%>" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="post-reacciones">
+                                                            <ul class="post-icons uk-flex uk-flex-between">
+                                                                <li><span class="" uk-icon="icon:heart; ratio: 1.3"></span>
+                                                                </li>
+                                                                <li><span class="" uk-icon="icon:comments; ratio: 1.3"></span>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="post-pie uk-flex">
+                                                                <h5 class="uk-width-1-6"><a href="/detalleUsuario"><%= element.nombreDeUsuario%></a></h5>
+                                                                <p class="uk-width-5-6"><%= element.pie%></p>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                       
+                                                    </article>
+                                                    
+                                                </section>
                                 
+                                            </div>
+                                        </div>
+                                    </main>
+                                    <% }) %>
+                              
+                                </section>
                             </div>
                         </div>
                     <% } %>
