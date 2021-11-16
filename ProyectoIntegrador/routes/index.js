@@ -9,6 +9,7 @@ router.get("/detallePost/:id", indexController.detail);
 router.get("/detalleUsuario/:id", indexController.detailUsuario);
 router.get('/resultadoBusqueda', indexController.search);
 
+
 router.get('/agregarPost', indexController.create);
 router.post('/agregarPost', indexController.store);
 
