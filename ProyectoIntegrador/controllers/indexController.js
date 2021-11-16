@@ -32,7 +32,16 @@ const indexController = {
         })
     }, 
     detail : function(req, res) {
-        posteo.findByPk(req.params.id)
+        let filtro = {
+            include: [
+                {association: "comentarios", include: "usuarios"},
+                {association: "usuarios"}
+            ], 
+            order: [
+                ["comentarios", "createdAt", "DESC"],
+            ]
+        }
+        posteo.findByPk(req.params.id, filtro)
         .then(posteos => {
             res.render("detallePost", {posteos : posteos});
         })
@@ -40,8 +49,18 @@ const indexController = {
             console.log(error);
             return res.send(error);
         })
-
     },
+    detailUsuario : function(req, res) {
+        usuario.findByPk(req.params.id)
+        .then(usuario => {
+            res.render("detalleUsuario", {usuarios : usuarios})
+        })
+        .catch(error => {
+            console.log(error);
+            return res.send(error);
+        })
+    },
+
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;

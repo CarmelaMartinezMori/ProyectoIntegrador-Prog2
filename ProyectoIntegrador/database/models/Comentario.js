@@ -38,6 +38,16 @@ module.exports = function(sequelize, dataTypes){
     }
 
     const Comentario = sequelize.define(alias, cols, config);
-
+    //relacion entre tabla comentarios
+    Comentario.associate = (db) => {
+        Comentario.belongsTo(db.Posteo, {
+            as: "posteo",
+            foreignKey: "posteos_id"
+        });
+        Comentario.belongsTo(db.Usuario, {
+            as: "usuario",
+            foreignKey: "usuarios_id"
+        });
+    };
     return Comentario;
 }

@@ -6,8 +6,7 @@ let indexController = require('../controllers/indexController');
 /* GET home page. */
 router.get('/', indexController.index);
 router.get("/detallePost/:id", indexController.detail);
-
-
+router.get("/detalleUsuario/:id", indexController.detailUsuario);
 router.get('/resultadoBusqueda', indexController.search);
 
 router.get('/miperfil', function(req, res, next){
