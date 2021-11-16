@@ -20,6 +20,10 @@ const storage = multer.diskStorage({
   
 const upload = multer({storage: storage});  
 
+router.get('/miperfil', function(req, res, next){
+  res.render('miperfil', {title : "Express"});
+});
+
 router.get('/login', userController.login);
 router.post('/login', userController.processLogin);
 

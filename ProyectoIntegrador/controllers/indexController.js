@@ -80,7 +80,25 @@ const indexController = {
             res.render('error', {error: "Error de conexion: " + error.message});
         });
     },
-    
+    //RENDERIZAR AGREGAR POST
+    create: function (req, res){
+        res.render('agregarPost')
+    },
+    //GUARDAR EL POST
+    store: function(req,res){
+        posteo.create({
+            nombreDeUsuario: req.body.nombreDeUsuario,
+            imagen: req.file, 
+            pie: req.body.pie
+        })
+        .then(posteo => {
+            res.redirect('/')
+        })
+        .catch(err => {
+            console.log(err);
+            res.send(err)
+        })
+    }
 }
 
 module.exports = indexController;

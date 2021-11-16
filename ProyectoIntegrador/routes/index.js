@@ -9,12 +9,10 @@ router.get("/detallePost/:id", indexController.detail);
 router.get("/detalleUsuario/:id", indexController.detailUsuario);
 router.get('/resultadoBusqueda', indexController.search);
 
-router.get('/miperfil', function(req, res, next){
-  res.render('miperfil', {title : "Express"});
-});
-router.get('/agregarPost', function(req, res, next){
-  res.render('agregarPost', {title : "Express"});
-});
+router.get('/agregarPost', indexController.create);
+router.post('/agregarPost', indexController.store);
+
+
 
 router.get('/detalleUsuario', function(req, res, next){
   res.render('detalleUsuario', {title : "Express"});
