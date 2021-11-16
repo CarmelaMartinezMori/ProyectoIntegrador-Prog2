@@ -40,7 +40,18 @@ module.exports = function(sequelize, dataTypes){
         timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
     }
 
-    const Posteos = sequelize.define(alias, cols, config);
+    const Posteo = sequelize.define(alias, cols, config);
 
-    return Posteos;
+    Posteo.associate = (db) => {
+            Posteo.belongsTo(db.Usuario, {
+                as: 'usuarios',
+                foreignKey: 'usuarios_id'
+            });
+            Posteo.hasMany(db.Comentario, {
+                as: 'comentarios',
+                foreignKey: 'posteos_id'
+            });
+    };
+
+    return Posteo;
 }

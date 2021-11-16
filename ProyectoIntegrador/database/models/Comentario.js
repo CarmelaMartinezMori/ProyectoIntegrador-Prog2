@@ -45,7 +45,7 @@ module.exports = function(sequelize, dataTypes){
             foreignKey: "posteos_id"
         });
         Comentario.belongsTo(db.Usuario, {
-            as: "usuario",
+            as: "usuarios",
             foreignKey: "usuarios_id"
         });
     };

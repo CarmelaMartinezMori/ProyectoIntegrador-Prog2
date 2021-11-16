@@ -31,6 +31,7 @@ const indexController = {
             
         })
     }, 
+    //DETALLE POST
     detail : function(req, res) {
         let filtro = {
             include: [
@@ -50,17 +51,6 @@ const indexController = {
             return res.send(error);
         })
     },
-    detailUsuario : function(req, res) {
-        usuario.findByPk(req.params.id)
-        .then(usuario => {
-            res.render("detalleUsuario", {usuarios : usuarios})
-        })
-        .catch(error => {
-            console.log(error);
-            return res.send(error);
-        })
-    },
-
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;

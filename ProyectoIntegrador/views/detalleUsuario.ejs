@@ -1,32 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodLoverz</title>
-    <link rel="icon"
-        href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
-        type="image/x-icon">
-
-    <link rel="stylesheet" href="css/detalleUsuario.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/general.css">
-
-    <!-- UiKit -->
-    <!-- <link rel="stylesheet" href="css/uikit.min.css">
-    <script src="js/uikit-icons.min.js"></script>
-    <script src="js/uikit.min.js"></script> -->
-    <!-- UiKit -->
-
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
-</head>
+<%- include('./partials/head')%>
 
 <body>
     <%- include('./partials/header')%>
@@ -40,7 +15,7 @@
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="uk-flex uk-flex-middle">
-                            <h3 class="uk-margin-remove"><%=usuarios[i].nombre%></h3>
+                            <h3 class="uk-margin-remove"></h3>
                             <button class="uk-button uk-button-small uk-button-primary uk-margin-left">Seguir</button>
                         </div>
                         <div>

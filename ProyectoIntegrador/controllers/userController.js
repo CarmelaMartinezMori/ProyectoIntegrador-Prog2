@@ -134,7 +134,47 @@ const userController = {
         req.session.destroy();
         res.clearCookie('usuarioId');
         res.redirect('/');
-    }
+    },
+    //MI PERFIL
+    //Crear metodo de perfil, buscandolo por el id de la session del usuario y validar que la misma exista
+    profile: function(req, res){
+        let filtro = {
+            include: [
+                { association: 'posteos', include: 'usuario' },
+                { association: 'comentarios' }
+            ]
+        }
+        //Valido si existe session
+        if(req.session.usuario){
+            //Busco al usuario por el id de la session y envio sus datos a la vista
+            usuario.findByPk(req.session.usuario.id, filtro)
+            .then(usuario => {
+                res.render("miPerfil", {usuario: usuario})
+            })
+        } else {
+            res.redirect("/users/login")
+        }
+    },
+    //DETALLE USUARIO
+    detailUsuario : function(req, res) {
+        let filtro = {
+            include: [
+                {association: "posteos", include: "usuarios"},
+                {association: "comentarios"}
+            ], 
+            order: [
+                ["comentarios", "createdAt", "DESC"],
+            ]
+        }
+        usuario.findByPk(req.params.id, filtro)
+        .then(usuarios => {
+            res.render("detalleUsuario", {usuarios : usuarios})
+        })
+        .catch(error => {
+            console.log(error);
+            return res.send(error);
+        })
+    },
 }
 
 module.exports = userController;
