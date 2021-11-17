@@ -120,6 +120,7 @@ const indexController = {
             res.send(error)
         })
     },
+    //ELIMINAR POST
     delete: function(req, res){
         let id = req.params.id
         posteo.destroy({
