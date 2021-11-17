@@ -18,6 +18,11 @@
                             <img src="../images/fotosPerfiles/<%=posteos.fotoPerfil%>" alt="Foto del usuario" width="35px">
                             <h3><a href="/detalleUsuario"><%=posteos.nombreDeUsuario%></a></h3>
                         </div>
+                        <a href="/editarPost/<%=posteos.id%>">Editar publicacion</a>
+                        <form action="/deletePost/<%=posteos.id%>" method="POST">
+                            <button>Eliminar post</button>
+                        
+                        </form>
                         <div class="lista-comentarios" >
                             <div class="comentario uk-flex uk-flex-middle uk-margin-small-top">
                                 <div class="uk-width-1-4 uk-flex uk-flex-center">

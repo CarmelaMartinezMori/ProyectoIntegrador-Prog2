@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { post } = require('../routes');
 const posteo = db.Posteo; 
 const comentario = db.Comentario;
 const usuario = db.Usuario;
@@ -87,6 +88,47 @@ const indexController = {
         .catch(err => {
             console.log(err);
             res.send(err)
+        })
+    },
+    //EDITAR PUBLICACION
+    edit: function(req, res){
+        posteo.findByPk(req.params.id)
+        .then(posteo => {
+            res.render("editarPost", {posteo : posteo})
+        })
+        .catch(err => {
+            console.log(err);
+            res.send(err)
+        })
+    },
+    update: function(req, res){
+        posteo.update({
+            nombreDeUsuario: req.body.nombreDeUsuario,
+            imagen: req.file, 
+            pie: req.body.pie
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(post => {
+            res.redirect("/")
+        })
+        .catch(error => {
+            console.log(error);
+            res.send(error)
+        })
+    },
+    delete: function(req, res){
+        let id = req.params.id
+        posteo.destroy({
+            where: {
+                id : id
+            }
+        })
+        .then(post => {
+            res.redirect('/')
         })
     }
 }

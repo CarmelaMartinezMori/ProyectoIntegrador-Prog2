@@ -13,7 +13,9 @@ router.get('/resultadoBusqueda', indexController.search);
 router.get('/agregarPost', indexController.create);
 router.post('/agregarPost', indexController.store);
 
-
+router.get('/editarPost/:id', indexController.edit);
+router.post('/editarPost/:id', indexController.update);
+router.post('/deletePost/:id', indexController.delete);
 
 router.get('/detalleUsuario', function(req, res, next){
   res.render('detalleUsuario', {title : "Express"});
