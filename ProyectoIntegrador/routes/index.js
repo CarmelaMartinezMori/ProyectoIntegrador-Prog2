@@ -17,9 +17,9 @@ router.get('/editarPost/:id', indexController.edit);
 router.post('/editarPost/:id', indexController.update);
 router.post('/deletePost/:id', indexController.delete);
 
-router.get('/detalleUsuario', function(req, res, next){
-  res.render('detalleUsuario', {title : "Express"});
-});
+router.post ('/detallePost/:id', indexController.crearComentario);
+router.post ('/detallePost/:id', indexController.borrarComentario);
+            
 router.get('/editarPerfil', function(req, res, next){
   res.render('editarPerfil', {title : "Express"});
 });

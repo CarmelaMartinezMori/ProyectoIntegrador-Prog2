@@ -34,7 +34,13 @@ const indexController = {
     }, 
     //DETALLE POST
     detail : function(req, res) {
-        let filtro = {
+        let posteos = posteo.findAll({
+            include: [{association: "comentarios"}],
+            order: [
+                ["createdAt", "DESC"]
+            ]
+        });
+        let comentarios = comentario.findAll({
             include: [
                 {association: "comentarios", include: "usuarios"},
                 {association: "usuarios"}
@@ -42,15 +48,26 @@ const indexController = {
             order: [
                 ["comentarios", "createdAt", "DESC"],
             ]
-        }
-        posteo.findByPk(req.params.id, filtro)
-        .then(posteos => {
-            res.render("detallePost", {posteos : posteos});
+        })
+        //intento
+        Promise.all([posteos, comentarios])
+        .then(([posteos, comentarios]) => {
+            res.render ('detallePost', {posteos: posteos})
         })
         .catch(error => {
             console.log(error);
-            return res.send(error);
+            res.send(error);
+            
         })
+
+        // posteo.findByPk(req.params.id, filtro)
+        // .then(posteos => {
+        //     res.render("detallePost", {posteos : posteos, comentarios: comentarios});
+        // })
+        // .catch(error => {
+        //     console.log(error);
+        //     return res.send(error);
+        // })
     },
     //BUSCADOR
     search: function (req, res) {
@@ -131,7 +148,41 @@ const indexController = {
         .then(post => {
             res.redirect('/')
         })
-    }
+    },
+    //AGREGAR COMENTARIO
+    crearComentario: (req, res) => {
+    
+        db.Comentario.create({
+            texto: req.body.texto,
+            usuarios_id: req.session.idUsuario,
+            productos_id: req.params.id
+        })
+        .then(comentarioNuevo => {
+            res.redirect('/detallePost/' + req.params.id);
+        })
+            .catch((error) => {
+                console.log("Error de conexion: " + error.message);
+
+                res.render('error', { error: "Error de conexion: " + error.message });
+            });
+    },
+    //ELIMINAR COMENTARIO
+    borrarComentario: (req, res) => {
+        db.Comentario.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+                res.redirect('/detallePost/' + req.params.id);
+            })
+            .catch((error) => {
+                console.log("Error de conexion: " + error.message);
+
+                res.render('error', { error: "Error de conexion: " + error.message });
+            });
+    },
+
 }
 
 module.exports = indexController;

@@ -1,5 +1,5 @@
 let db = require('../database/models');
-const usuario = db.Usuario;
+let usuario = db.Usuario;
 let bcrypt = require('bcryptjs');
 
 const userController = {
@@ -156,7 +156,7 @@ const userController = {
         }
     },
     //DETALLE USUARIO
-    detailUsuario : function(req, res) {
+    detailUsuario : (req, res, next)=> {
         let filtro = {
             include: [
                 {association: "posteos", include: "usuarios"},
@@ -166,9 +166,9 @@ const userController = {
                 ["comentarios", "createdAt", "DESC"],
             ]
         }
-        usuario.findByPk(req.params.id, filtro)
-        .then(usuarios => {
-            res.render("detalleUsuario", {usuarios : usuarios})
+        db.Usuario.findByPk(req.params.id, filtro)
+        .then(resultado => {
+            res.render("detalleUsuario", {usuarios : resultado});
         })
         .catch(error => {
             console.log(error);
