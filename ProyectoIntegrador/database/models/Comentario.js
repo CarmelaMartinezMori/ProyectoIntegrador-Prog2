@@ -46,7 +46,7 @@ module.exports = function(sequelize, dataTypes){
         });
         Comentario.belongsTo(db.Usuario, {
             as: "usuarios",
-            foreignKey: "usuarios_id"
+            foreignKey: "id"
         });
     };
     return Comentario;

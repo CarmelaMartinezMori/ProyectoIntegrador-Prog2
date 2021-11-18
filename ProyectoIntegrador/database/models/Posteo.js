@@ -10,16 +10,10 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        nombreDeUsuario:{
-            type: dataTypes.STRING
-        },
         pie:{
             type: dataTypes.STRING
         },
         imagen:{
-            type: dataTypes.STRING
-        },
-        fotoPerfil:{
             type: dataTypes.STRING
         },
         fecha:{
@@ -45,7 +39,7 @@ module.exports = function(sequelize, dataTypes){
     Posteo.associate = (db) => {
             Posteo.hasMany(db.Usuario, {
                 as: 'usuarios',
-                foreignKey: 'usuarios_id'
+                foreignKey: 'id'
             });
             Posteo.hasMany(db.Comentario, {
                 as: 'comentarios',
