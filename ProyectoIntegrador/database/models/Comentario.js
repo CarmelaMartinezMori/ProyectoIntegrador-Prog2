@@ -10,9 +10,6 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        nombreDeUsuario:{
-            type: dataTypes.STRING
-        },
         texto:{
             type: dataTypes.STRING
         },
