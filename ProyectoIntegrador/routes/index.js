@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
+const multer = require('multer');
 let indexController = require('../controllers/indexController');
+const path = require('path');
+
+//MULTER
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'public/images/imagenesPerfil')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+  }
+})
+const upload = multer({ storage: storage })
 
 
 /* GET home page. */
@@ -11,7 +24,7 @@ router.get('/resultadoBusqueda', indexController.search);
 
 
 router.get('/agregarPost', indexController.create);
-router.post('/agregarPost', indexController.store);
+router.post('/agregarPost', upload.single("imagen"), indexController.store);
 
 router.get('/editarPost/:id', indexController.edit);
 router.post('/editarPost/:id', indexController.update);

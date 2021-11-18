@@ -99,7 +99,7 @@ const indexController = {
         let fechaCreate = hoy.toISOString()
         posteo.create({
             pie: req.body.pie,
-            imagen: req.file, 
+            imagen: req.file.filename, 
             fecha: fechaCreate,
             usuarios_id: req.session.usuarioId,
         })
