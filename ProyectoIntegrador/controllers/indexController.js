@@ -95,9 +95,9 @@ const indexController = {
     //GUARDAR EL POST
     store: function(req,res){
         posteo.create({
-            nombreDeUsuario: req.body.nombreDeUsuario,
+            id: req.session.usuarioId,
+            pie: req.body.pie,
             imagen: req.file, 
-            pie: req.body.pie
         })
         .then(posteo => {
             res.redirect('/')
