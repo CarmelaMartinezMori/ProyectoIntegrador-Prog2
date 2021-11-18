@@ -94,10 +94,14 @@ const indexController = {
     },
     //GUARDAR EL POST
     store: function(req,res){
+        const tiempoTranscurrido = Date.now();
+        const hoy = new Date(tiempoTranscurrido);
+        let fechaCreate = hoy.toISOString()
         posteo.create({
-            id: req.session.usuarioId,
             pie: req.body.pie,
             imagen: req.file, 
+            fecha: fechaCreate,
+            usuarios_id: req.session.usuarioId,
         })
         .then(posteo => {
             res.redirect('/')
