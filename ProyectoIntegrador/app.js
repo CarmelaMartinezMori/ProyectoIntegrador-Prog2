@@ -23,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session( {
   secret: "Mensaje Secreto",
-  resave: true,
-  saveUninitialized: false 
+  resave: false,
+  saveUninitialized: true 
 }))
 
 app.use(function(req, res, next){
@@ -32,7 +32,9 @@ app.use(function(req, res, next){
     usuario.findByPk(req.cookies.usuarioId)
     .then(usuario => {
       req.session.usuario = usuario.email;
-      res.locals.usuario = req.session.usuario
+      res.locals.usuario = req.session.usuario;
+      req.session.idUsuario = usuario.id;
+      res.locals.idUsuario = req.session.idUsuario 
     })
   }
   return next();
@@ -40,7 +42,7 @@ app.use(function(req, res, next){
 
 app.use(function(req, res, next){
   res.locals.usuario = null
-  if(req.session.usuario!= undefined){
+  if(req.session.usuario != undefined){
     res.locals.usuario = req.session.usuario
   }
   return next()
