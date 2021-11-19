@@ -39,7 +39,7 @@ module.exports = function(sequelize, dataTypes){
     Posteo.associate = (db) => {
             Posteo.belongsTo(db.Usuario, {
                 as: 'usuarios',
-                foreignKey: 'id'
+                foreignKey: 'usuarios_id'
             });
             Posteo.hasMany(db.Comentario, {
                 as: 'comentarios',
