@@ -79,13 +79,19 @@ const indexController = {
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;
-        posteo.findAll({
+        posteo.findAll(
+            ({include:[
+                { association: "usuarios" },
+            ],
             where: [
                 {'pie':  {[op.like]: `%${search}%`}}
             ],
+            order:[
+                ["createdAt","DESC"],
+            ],
             limit: 10,
             offset: 0,
-        })
+        }))
         .then (resultado => {
             res.render('resultadoBusqueda', {pie: resultado});
         })
