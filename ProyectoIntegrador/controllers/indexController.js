@@ -33,8 +33,11 @@ const indexController = {
         let filtro = {
             include: [
                 {association: "usuarios"},
-                {association: "comentarios"}
+                {association: "comentarios", include: "usuarios"}
             ], 
+            order:[
+                ["createdAt","DESC"],
+            ],
         }
         posteo.findByPk(req.params.id, filtro)
         .then(resultado => {
