@@ -40,30 +40,32 @@ const indexController = {
     //DETALLE POSTEO
     detail : function(req, res) {
         //let posteos = posteo.findByPk(req.params.id)
-        let posteos = posteo.findAll({
-            
-            include: [{association: "comentarios"}],
-            order: [
-                ["createdAt", "DESC"]
-            ]
-        });
-        let comentarios = comentario.findAll({
-            include: [
-                {association: "posteo", include: "usuarios"},
-            ], 
-            order: [
-                ["createdAt", "DESC"],
-            ]
-        });
-
-        Promise.all([posteos, comentarios])
-        .then(([posteos, comentarios]) => {
-            return res.render ('detallePost', {posteos: posteos, comentarios: comentarios})
+        posteo.findAll({
+            include: [{association: "usuarios",
+            association: "comentarios"}]
+        })
+        .then(posteos => {
+            return res.render( 'detallePost', {posteos : posteos})
         })
         .catch(error => {
-            console.log(error);
             return res.send(error);
         })
+        // let comentarios = comentario.findAll({
+        //     include: [
+        //         {association: "posteo", include: "usuarios"},
+        //     ], 
+        //     order: [
+        //         ["createdAt", "DESC"],
+        //     ]
+        // });
+        // Promise.all([posteos, comentarios])
+        // .then(([posteos, comentarios]) => {
+        //     return res.render ('detallePost', {posteos: posteos, comentarios: comentarios})
+        // })
+        // .catch(error => {
+        //     console.log(error);
+        //     return res.send(error);
+        // })
 
         // posteo.findByPk(req.params.id, filtro)
         // .then(posteos => {
