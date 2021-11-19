@@ -159,14 +159,10 @@ const userController = {
     detailUsuario : (req, res, next)=> {
         let filtro = {
             include: [
-                {association: "posteos", include: "usuarios"},
-                {association: "comentarios"}
+                {association: "posteos"},
             ], 
-            order: [
-                ["comentarios", "createdAt", "DESC"],
-            ]
         }
-        db.Usuario.findByPk(req.params.id, filtro)
+        usuario.findByPk(req.params.id, filtro)
         .then(resultado => {
             res.render("detalleUsuario", {usuarios : resultado});
         })

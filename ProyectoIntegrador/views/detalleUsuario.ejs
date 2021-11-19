@@ -18,7 +18,7 @@
                             <h3 class="uk-margin-remove"></h3>
                             <button class="uk-button uk-button-small uk-button-primary uk-margin-left">Seguir</button>
                         </div>
-                        <h1><%= posteos.usuarios.id %></h1>
+                        <h1><%= usuarios.nombreDeUsuario %></h1>
                         <div>
                             <ul class="red-usuario uk-flex uk-flex-between uk-width-1-2">
                                 <li><%= usuarios.posteos.length%> posts</li>
@@ -33,7 +33,7 @@
                         <% usuarios.posteos.forEach(element=> { %>
                         <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
                             <a href="/detallePost/<%= element.id %>" class="link-detalle">
-                                <img src="/images/imagenesPerfil/<%= element.foto %>" alt="foto de perfil" class="foto-perfil" width="200px">
+                                <img src="/images/imagenesPerfil/<%= element.imagen %>" alt="foto de perfil" class="foto-perfil" width="200px">
                                 <p class="uk-text-center"><%= element.pie %></p>
                             </a>
                         </div>
