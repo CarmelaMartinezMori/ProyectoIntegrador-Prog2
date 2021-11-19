@@ -26,30 +26,35 @@ const indexController = {
              }).catch(error => {
                  return res.send(error)       
              })
-        
-        //  Promise.all([posteos, comentarios])
-        //  .then(([posteos, comentarios]) => {
-        //      return res.render ('index', {posteos: posteos, comentarios: comentarios})
-        //  })
-        //  .catch(error => {
-        //      console.log(error);
-        //      return res.send(error);
-            
-        //  })
     }, 
+
     //DETALLE POSTEO
-    detail : function(req, res) {
-        //let posteos = posteo.findByPk(req.params.id)
-        posteo.findAll({
-            include: [{association: "usuarios",
-            association: "comentarios"}]
-        })
-        .then(posteos => {
-            return res.render( 'detallePost', {posteos : posteos})
+    detail : (req, res, next) => {
+        let filtro = {
+            include: [
+                {association: "usuarios"},
+                {association: "comentarios"}
+            ], 
+        }
+        posteo.findByPk(req.params.id, filtro)
+        .then(resultado => {
+            res.render("detallePost", {posteos : resultado});
         })
         .catch(error => {
+            console.log(error);
             return res.send(error);
         })
+
+        // posteo.findAll({
+        //     include: [{association: "usuarios",
+        //     association: "comentarios"}]
+        // })
+        // .then(posteos => {
+        //     return res.render( 'detallePost', {posteos : posteos})
+        // })
+        // .catch(error => {
+        //     return res.send(error);
+        // })
         // let comentarios = comentario.findAll({
         //     include: [
         //         {association: "posteo", include: "usuarios"},
@@ -76,6 +81,7 @@ const indexController = {
         //     return res.send(error);
         // })
     },
+
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;
