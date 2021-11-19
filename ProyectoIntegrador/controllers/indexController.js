@@ -101,7 +101,7 @@ const indexController = {
             pie: req.body.pie,
             imagen: req.file.filename, 
             fecha: fechaCreate,
-            usuarios_id: req.session.usuarioId,
+            usuarios_id: req.session.idUsuario,
         })
         .then(posteo => {
             res.redirect('/')
