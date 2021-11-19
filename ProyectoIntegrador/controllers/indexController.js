@@ -1,3 +1,4 @@
+//const posteos = require('../database/posteos');
 const db = require('../database/models');
 const { post } = require('../routes');
 const posteo = db.Posteo; 
@@ -11,31 +12,36 @@ const op = db.Sequelize.Op
 const indexController = {
     //HOME
     index: function (req, res){
-        let posteos = posteo.findAll({
-            order: [
-                ["createdAt", "DESC"]
-            ]
-        });
-        let comentarios = comentario.findAll({
-            order: [
-                ["createdAt", "DESC"]
-            ]
-        });
+        posteo.findAll(
+            ({include:[
+                { association: "usuarios" },
+                { association: "comentarios" }
+            ],
+                order:[
+                    ["createdAt","DESC"],
+                ],
+            }))
+             .then(posteos=> {
+                 return res.render("index", {posteos: posteos});
+             }).catch(error => {
+                 return res.send(error)       
+             })
         
-        Promise.all([posteos, comentarios])
-        .then(([posteos, comentarios]) => {
-            return res.render ('index', {posteos: posteos, comentarios: comentarios})
-        })
-        .catch(error => {
-            console.log(error);
-            return res.send(error);
+        //  Promise.all([posteos, comentarios])
+        //  .then(([posteos, comentarios]) => {
+        //      return res.render ('index', {posteos: posteos, comentarios: comentarios})
+        //  })
+        //  .catch(error => {
+        //      console.log(error);
+        //      return res.send(error);
             
-        })
+        //  })
     }, 
     //DETALLE POSTEO
     detail : function(req, res) {
-        
+        //let posteos = posteo.findByPk(req.params.id)
         let posteos = posteo.findAll({
+            
             include: [{association: "comentarios"}],
             order: [
                 ["createdAt", "DESC"]
