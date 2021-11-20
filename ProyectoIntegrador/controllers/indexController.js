@@ -15,7 +15,7 @@ const indexController = {
         posteo.findAll(
             ({include:[
                 { association: "usuarios" },
-                { association: "comentarios" }
+                { association: "comentarios", include: "usuarios" }
             ],
                 order:[
                     ["createdAt","DESC"],
