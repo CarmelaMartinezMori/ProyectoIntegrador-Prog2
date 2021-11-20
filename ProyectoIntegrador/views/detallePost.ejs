@@ -18,13 +18,13 @@
                             <img src="../images/fotosPerfiles/<%=posteos.usuarios.fotoPerfil%>" alt="Foto del usuario" width="35px">
                             <h3><a href="/users/detalleUsuario/<%=posteos.usuarios.id%>"><%=posteos.usuarios.nombreDeUsuario%></a></h3>
                         </div>
-                       <% if (posteos.usuarios.id == locals.idUsuario) { %>
+                        <% if (posteos.usuarios.id == locals.idUsuario) { %>
                             <a href="/editarPost/<%=posteos.id%>">Editar publicacion</a>
                             <form action="/deletePost/<%=posteos.id%>" method="POST">
                                 <button>Eliminar post</button>
                             </form>
                        <% } %>
-                        
+                       
                         <h2><%= posteos.pie %></h2>
 <!-- Si no hay comentarios:-->                            
                         <% if(posteos.comentarios == undefined || posteos.comentarios == 0 ) { %> 

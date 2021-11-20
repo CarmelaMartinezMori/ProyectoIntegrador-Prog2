@@ -132,7 +132,8 @@ const indexController = {
     //ELIMINAR POST
     delete: function(req, res){
         let id = req.params.id
-        posteo.destroy({
+        posteo.destroy(
+            {
             where: {
                 id : id
             }
@@ -171,7 +172,7 @@ const indexController = {
             }
         })
         .then(() => {
-            res.redirect('/detallePost/' + req.params.id);
+            res.redirect('/');
         })
         .catch((error) => {
             console.log("Error de conexion: " + error.message);
