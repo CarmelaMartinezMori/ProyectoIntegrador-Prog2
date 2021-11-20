@@ -47,44 +47,7 @@ const indexController = {
             console.log(error);
             return res.send(error);
         })
-
-        // posteo.findAll({
-        //     include: [{association: "usuarios",
-        //     association: "comentarios"}]
-        // })
-        // .then(posteos => {
-        //     return res.render( 'detallePost', {posteos : posteos})
-        // })
-        // .catch(error => {
-        //     return res.send(error);
-        // })
-        // let comentarios = comentario.findAll({
-        //     include: [
-        //         {association: "posteo", include: "usuarios"},
-        //     ], 
-        //     order: [
-        //         ["createdAt", "DESC"],
-        //     ]
-        // });
-        // Promise.all([posteos, comentarios])
-        // .then(([posteos, comentarios]) => {
-        //     return res.render ('detallePost', {posteos: posteos, comentarios: comentarios})
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        //     return res.send(error);
-        // })
-
-        // posteo.findByPk(req.params.id, filtro)
-        // .then(posteos => {
-        //     res.render("detallePost", {posteos : posteos, comentarios: comentarios});
-        // })
-        // .catch(error => {
-        //     console.log(error);
-        //     return res.send(error);
-        // })
     },
-
     //BUSCADOR
     search: function (req, res) {
         let search = req.query.busqueda;
@@ -177,36 +140,37 @@ const indexController = {
     },
     //AGREGAR COMENTARIO
     crearComentario: (req, res) => {
-    
-        db.Comentario.create({
+        const tiempoTranscurrido = Date.now();
+        const hoy = new Date(tiempoTranscurrido);
+        let fechaCreate = hoy.toISOString()
+        comentario.create({
             texto: req.body.texto,
             usuarios_id: req.session.idUsuario,
-            productos_id: req.params.id
+            posteos_id: req.params.id,
+            creacion: fechaCreate
         })
         .then(comentarioNuevo => {
             res.redirect('/detallePost/' + req.params.id);
         })
-            .catch((error) => {
-                console.log("Error de conexion: " + error.message);
-
-                res.render('error', { error: "Error de conexion: " + error.message });
-            });
+        .catch((error) => {
+            console.log("Error de conexion: " + error.message);
+            res.render('error', { error: "Error de conexion: " + error.message });
+        });
     },
     //ELIMINAR COMENTARIO
     borrarComentario: (req, res) => {
-        db.Comentario.destroy({
+        comentario.destroy({
             where: {
                 id: req.params.id
             }
         })
-            .then(() => {
-                res.redirect('/detallePost/' + req.params.id);
-            })
-            .catch((error) => {
-                console.log("Error de conexion: " + error.message);
-
-                res.render('error', { error: "Error de conexion: " + error.message });
-            });
+        .then(() => {
+            res.redirect('/detallePost/' + req.params.id);
+        })
+        .catch((error) => {
+            console.log("Error de conexion: " + error.message);
+            res.render('error', { error: "Error de conexion: " + error.message });
+        });
     },
 
 }

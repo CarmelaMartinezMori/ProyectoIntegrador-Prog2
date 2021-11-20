@@ -30,8 +30,8 @@ router.get('/editarPost/:id', indexController.edit);
 router.post('/editarPost/:id', indexController.update);
 router.post('/deletePost/:id', indexController.delete);
 
-//router.post ('/detallePost/:id', indexController.crearComentario);
-//router.post ('/detallePost/:id', indexController.borrarComentario);
+router.post ('/detallePost/:id', indexController.crearComentario);
+router.post ('/comentario/:id', indexController.borrarComentario);
             
 router.get('/editarPerfil', function(req, res, next){
   res.render('editarPerfil', {title : "Express"});
