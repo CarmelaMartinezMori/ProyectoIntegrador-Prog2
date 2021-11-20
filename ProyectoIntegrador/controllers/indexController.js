@@ -108,10 +108,13 @@ const indexController = {
         })
     },
     update: function(req, res){
+        const tiempoTranscurrido = Date.now();
+        const hoy = new Date(tiempoTranscurrido);
+        let fechaCreate = hoy.toISOString()
         posteo.update({
-            nombreDeUsuario: req.body.nombreDeUsuario,
-            imagen: req.file, 
-            pie: req.body.pie
+            pie: req.body.pie,
+            fecha: fechaCreate,
+            usuarios_id: req.session.idUsuario,
         },
         {
             where: {
@@ -119,7 +122,7 @@ const indexController = {
             }
         })
         .then(post => {
-            res.redirect("/")
+            res.redirect('/detallePost/' + req.params.id)
         })
         .catch(error => {
             console.log(error);
@@ -136,6 +139,9 @@ const indexController = {
         })
         .then(post => {
             res.redirect('/')
+        })
+        .catch(error => {
+            res.send('error')
         })
     },
     //AGREGAR COMENTARIO
