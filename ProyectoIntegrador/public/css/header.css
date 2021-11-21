@@ -53,6 +53,14 @@ header .uk-navbar-right a{
     margin-right: 15px;
 }
 
+header .uk-grid-small{
+    background-color:#8FC0A9;
+    width: 200px;
+}
+header .uk-navbar-dropdown{
+    background-color: #8FC0A9;
+    width: 225px;
+}
 header div.uk-navbar-center ul li:nth-last-child(1){
     border-right: none;
 }
