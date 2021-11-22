@@ -73,6 +73,26 @@ const indexController = {
             res.render('error', {error: "Error de conexion: " + error.message});
         });
     },
+    searchU: function (req, res) {
+        let search = req.query.busquedaUser;
+        usuario.findAll({
+            where: [
+                {'nombreDeUsuario':  {[op.like]: `%${search}%`}}
+            ],
+            order:[
+                ["nombreDeUsuario","ASC"],
+            ],
+            offset: 0,
+        })
+        .then (resultado => {
+            res.render('resultadoUsuarios', {nombreDeUsuario: resultado});
+        })
+        
+        .catch(error => {
+            console.log("Error de conexion: " + error.message);
+            res.render('error', {error: "Error de conexion: " + error.message});
+        });
+    },
     //RENDERIZAR AGREGAR POST
     create: function (req, res){
         res.render('agregarPost')

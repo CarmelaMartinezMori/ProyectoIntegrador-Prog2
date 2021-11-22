@@ -21,7 +21,7 @@ router.get('/', indexController.index);
 router.get('/detallePost/:id', indexController.detail);
 
 router.get('/resultadoBusqueda', indexController.search);
-
+router.get('/resultadoUsuarios', indexController.searchU);
 
 router.get('/agregarPost', indexController.create);
 router.post('/agregarPost', upload.single("imagen"), indexController.store);

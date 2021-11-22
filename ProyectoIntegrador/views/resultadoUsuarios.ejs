@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FoodLoverz</title>
+        <link rel="icon"
+            href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
+            type="image/x-icon">
+    
+    
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/general.css">
+    
+        <!-- UiKit -->
+        <!-- <link rel="stylesheet" href="css/uikit.min.css">
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/uikit.min.js"></script> -->
+        <!-- UiKit -->
+    
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+    
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+    </head> 
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header')%>
+
+    <main>
+        <div class="uk-section uk-section-small">
+            <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">
+               
+                <!-- <h2>(Mostar resultados de busqueda)</h2> -->
+                <!-- SI NO ENCUENTRA RESULTADOS -->
+                <% if (nombreDeUsuario== undefined || nombreDeUsuario==0) { %>
+                    <h2>No se encontraron usuarios con ese nombre.</h2>
+                <% } else {%>
+                    <div>
+                        <h2>Usuarios encontrados: </h2>
+                        <div class="resultadosBusqueda">
+                         
+                
+                            <% nombreDeUsuario.forEach(element => {  %> 
+                        
+                                <div class="uk-section uk-section-small">
+                                    <div class="uk-container uk-container-large uk-flex">
+                                        <section id="posts">                                             
+                                            <article class="post uk-card-hover uk-flex uk-flex-column">
+                                               
+                                                    <div class="uk-card-media-top" >
+                                                        <img src="/images/fotosPerfiles/<%= element.fotoPerfil%>" alt="" width="250px">
+                                                    </div>
+                                                    <div class="uk-card-footer uk-flex uk-flex-center ">
+                                                    <h4><a href="/users/detalleUsuario/<%=element.id %>"  ><%=element.nombreDeUsuario%> </a></h4>
+                                                </div>
+                                            </article>
+                                            
+                                        </section>
+                        
+                                    </div>
+                                </div>
+                                <% }) %>
+                          
+                            </section>
+                        </div>
+                    </div>
+                <% } %>
+                   
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <%- include('./partials/footer')%>
+
+
+</body>

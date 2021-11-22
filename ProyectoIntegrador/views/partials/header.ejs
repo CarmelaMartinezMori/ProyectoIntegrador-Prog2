@@ -4,9 +4,9 @@
             <div class="">
                 <nav class="" uk-navbar>
                     <div class="uk-navbar-left">
-                        <h2 class="logo"><a href="/">FoodLoverz<img src="images/logo.png" alt="" id="logoImg"></a></h2>
+                        <h2 class="logo"><a href="/">FoodLoverz<img src="images/logo.png" alt="" id="logoImg"></a></h2>                                       
                     </div>
-                    <div class="uk-navbar-center">
+                    <div class="uk-navbar-center">                      
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
                             <li><a href="/">HOME</a></li>
                             <li><a href="/users/logout">LOG OUT</a>
@@ -16,11 +16,24 @@
                     <div class="uk-navbar-right">
                         <a href="/agregarPost">Agregar post</a>
                         <a href="/users/miPerfil/<%= idUsuario %> ">Mi perfil</a>
-                        <form action="/resultadoBusqueda" class="uk-search uk-search-default" method="get" >
-                            <span uk-search-icon></span>
-                            <input type="search" class="uk-search-input" placeholder="Buscar..." name="busqueda">
+                        <div class="uk-navbar-right">                          
+            <a class="" href="" uk-search-icon></a>
+            <div class="uk-navbar-dropdown" uk-drop="mode: click; cls-drop: uk-navbar-dropdown; boundary: !nav">
+                <div class="uk-grid-small uk-flex-column" uk-grid>
+                    <div class="uk-width-expand">
+                        <form action="/resultadoBusqueda" class="uk-search uk-search-default" method="get">
+                            <span uk-search-icon></span>                          
+                            <input  type="search" class="uk-search-input" placeholder="Buscar posteos" name="busqueda">
+                        </form>
+                    </div>                
+                    <div class="uk-width-expand">
+                        <form action="/resultadoUsuarios" class="uk-search uk-search-default" method="get" >
+                            <span class="uk-search-icon-flip" uk-search-icon></span>
+                            <input type="search" class="uk-search-input" placeholder="Buscar usuarios" name="busquedaUser">
                         </form>
                     </div>
+                </div>
+            </div>
                 </nav>
             </div>
         </section>
@@ -30,21 +43,36 @@
             <div class="">
                 <nav class="" uk-navbar>
                     <div class="uk-navbar-left">
-                        <h2 class="logo"><a href="/">FoodLoverz<img src="/images/logo.png" alt="" id="logoImg"></a></h2>
+                        <h2 class="logo"><a href="/">FoodLoverz<img src="/images/logo.png" alt="" id="logoImg"></a></h2>                       
                     </div>
-                    <div class="uk-navbar-center">
+                    <div class="uk-navbar-center">                      
                         <ul class="uk-flex uk-flex-between uk-flex-middle">
                             <li><a href="/">HOME</a></li>
                             <li><a href="/users/registracion">REGISTRO</a></li>
                             <li><a href="/users/login">LOG IN</a></li>
                         </ul>
                     </div>
-                    <div class="uk-navbar-right">
-                      <form action="/resultadoBusqueda" class="uk-search uk-search-default" method="get">
-                            <span uk-search-icon></span>
-                            <input type="search" class="uk-search-input" placeholder="Buscar..." name="busqueda">
-                        </form>
+                    <div class="uk-navbar-right" >
+                    <a class="" href="" uk-search-icon></a>
+                    <div class="uk-navbar-dropdown" uk-drop="mode: click; cls-drop: uk-navbar-dropdown; boundary: !nav">
+        
+                        <div class="uk-grid-small uk-flex-column" uk-grid>
+                            <div class="uk-width-expand">
+                                <form action="/resultadoBusqueda" class="uk-search uk-search-default" method="get">
+                                    <span uk-search-icon></span>                                   
+                                    <input  type="search" class="uk-search-input" placeholder="Buscar posteos" name="busqueda">
+                                </form>
+                            </div>
+                          
+                            <div class="uk-width-expand">
+                                <form action="/resultadoUsuarios" class="uk-search uk-search-default" method="get" >
+                                    <span class="uk-search-icon-flip" uk-search-icon></span>
+                                    <input type="search" class="uk-search-input" placeholder="Buscar usuarios" name="busquedaUser">
+                                </form>
+                            </div>
+                        </div>      
                     </div>
+                </div>                 
                 </nav>
             </div>
         </section>
