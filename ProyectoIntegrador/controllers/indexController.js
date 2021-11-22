@@ -131,18 +131,17 @@ const indexController = {
         const tiempoTranscurrido = Date.now();
         const hoy = new Date(tiempoTranscurrido);
         let fechaCreate = hoy.toISOString()
+        let id = req.params.id
         posteo.update({
-            pie: req.body.pie,
-            fecha: fechaCreate,
-            usuarios_id: req.session.idUsuario,
+            pie: req.body.pie
         },
         {
             where: {
-                id: req.params.id
+                id: id
             }
         })
          .then(post => {
-             res.redirect('/detallePost/' + req.params.id)
+             res.redirect('/detallePost/' + id)
          })
          .catch(error => {
              console.log(error);
@@ -166,7 +165,6 @@ const indexController = {
                 id : id
             }
         })
-        //Promise.all([borrarComentarios, borrarPost])
         .then(post => {
             res.redirect('/')
         })
