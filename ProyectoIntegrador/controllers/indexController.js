@@ -121,23 +121,32 @@ const indexController = {
                 id: req.params.id
             }
         })
-        .then(post => {
-            res.redirect('/detallePost/' + req.params.id)
-        })
-        .catch(error => {
-            console.log(error);
-            res.send(error)
-        })
+         .then(post => {
+             res.redirect('/detallePost/' + req.params.id)
+         })
+         .catch(error => {
+             console.log(error);
+             res.send(error)
+         })
     },
     //ELIMINAR POST
-    delete: function(req, res){
+    delete: async function(req, res){
         let id = req.params.id
-        posteo.destroy(
-            {
+        let idDelPost = id
+        let idDelComentario = comentario.posteos_id
+        let borrarComentarios = await comentario.destroy(
+             {
+                 where : {
+                     posteos_id : idDelPost
+                 }
+             }
+         )
+        let borrarPost = await posteo.destroy({
             where: {
                 id : id
             }
         })
+        //Promise.all([borrarComentarios, borrarPost])
         .then(post => {
             res.redirect('/')
         })
