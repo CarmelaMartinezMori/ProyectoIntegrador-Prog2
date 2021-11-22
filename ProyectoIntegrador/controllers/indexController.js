@@ -118,7 +118,7 @@ const indexController = {
     },
 
        //EDITAR PUBLICACION
-    edit: function(req, res){
+       edit: function(req, res){
         let posteo = db.Posteo.findByPk(req.params.id)
 
         Promise.all([posteo])
