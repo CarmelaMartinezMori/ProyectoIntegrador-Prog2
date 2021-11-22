@@ -116,37 +116,34 @@ const indexController = {
             res.send(err)
         })
     },
-    //EDITAR PUBLICACION
+
+       //EDITAR PUBLICACION
     edit: function(req, res){
-        posteo.findByPk(req.params.id)
-        .then(posteo => {
-            res.render("editarPost", {posteo : posteo})
+        let posteo = db.Posteo.findByPk(req.params.id)
+
+        Promise.all([posteo])
+        .then(([posteo]) => {
+            res.render('editarPost',{posteo: posteo})
         })
         .catch(err => {
-            console.log(err);
+            console.log(err)
             res.send(err)
         })
     },
     update: function(req, res){
-        const tiempoTranscurrido = Date.now();
-        const hoy = new Date(tiempoTranscurrido);
-        let fechaCreate = hoy.toISOString()
-        let id = req.params.id
-        posteo.update({
-            pie: req.body.pie
+        let id = req.params.id  
+        db.Posteo.update({
+            pie: req.body.pie,
         },
         {
             where: {
                 id: id
             }
         })
-         .then(post => {
-             res.redirect('/detallePost/' + id)
-         })
-         .catch(error => {
-             console.log(error);
-             res.send(error)
-         })
+        .then(pie => {
+            res.redirect("/detallePost/" + id)
+        })
+
     },
     //ELIMINAR POST
     delete: async function(req, res){

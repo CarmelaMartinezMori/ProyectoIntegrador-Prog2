@@ -27,7 +27,7 @@ router.get('/agregarPost', indexController.create);
 router.post('/agregarPost', upload.single("imagen"), indexController.store);
 
 router.get('/editarPost/:id', indexController.edit);
-router.post('/editarPost/:id', indexController.update);
+router.post('/editarPost/:id', upload.single("pie"), indexController.update);
 router.post('/deletePost/:id', indexController.delete);
 
 router.post ('/detallePost/:id', indexController.crearComentario);
