@@ -140,7 +140,7 @@ const indexController = {
                 id: id
             }
         })
-        .then(pie => {
+        .then(post => {
             res.redirect("/detallePost/" + id)
         })
 

@@ -19,7 +19,8 @@
                             <h3><a href="/users/detalleUsuario/<%=posteos.usuarios.id%>"><%=posteos.usuarios.nombreDeUsuario%></a></h3>
                         </div>
                         <% if (posteos.usuarios.id == locals.idUsuario) { %>
-                            <a href="/editarPost/<%=posteos.id%>">Editar publicacion</a>
+                           <form action="/editarPost/<%=posteos.id%>"> <button> Editar publicacion</button> 
+                        </form>
                             <form action="/deletePost/<%=posteos.id%>" method="POST">
                                 <button>Eliminar post</button>
                             </form>
