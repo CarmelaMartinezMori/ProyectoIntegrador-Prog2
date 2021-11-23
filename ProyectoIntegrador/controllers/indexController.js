@@ -117,33 +117,34 @@ const indexController = {
         })
     },
 
-       //EDITAR PUBLICACION
-       edit: function(req, res){
-        let posteo = db.Posteo.findByPk(req.params.id)
-
-        Promise.all([posteo])
-        .then(([posteo]) => {
-            res.render('editarPost',{posteo: posteo})
+       //EDITAR PUBLICACION   
+    edit: function(req, res){
+        posteo.findByPk(req.params.id)
+        .then(posteo => {
+            res.render("editarPost", {posteo : posteo})
         })
         .catch(err => {
-            console.log(err)
+            console.log(err);
             res.send(err)
         })
     },
     update: function(req, res){
-        let id = req.params.id  
-        db.Posteo.update({
-            pie: req.body.pie,
+        let id = req.params.id
+        posteo.update({
+            pie: req.body.pie,  
         },
         {
             where: {
-                id: id
-            }
+                id: req.params.id
+            },
         })
-        .then(post => {
-            res.redirect("/detallePost/" + id)
-        })
-
+         .then(post => {
+             res.redirect('/detallePost/' + req.params.id)
+         })
+         .catch(error => {
+             console.log(error);
+             res.send(error)
+         })
     },
     //ELIMINAR POST
     delete: async function(req, res){
@@ -203,7 +204,7 @@ const indexController = {
             res.render('error', { error: "Error de conexion: " + error.message });
         });
     },
-
+   
 }
 
 module.exports = indexController;
