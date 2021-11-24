@@ -3,7 +3,6 @@
     <%- include('./partials/head') %> 
 <body>
     <%- include('./partials/header')%>
-
     <main>
         <div class="uk-section uk-section-small">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-flex-center">   
@@ -12,7 +11,6 @@
                         <% if(locals.errors){ %>
                             <p class= "error" style="color: red;"> <%= errors.message %> </p>
                         <% } %>
-                        
                         <div class="uk-margin">
                             <div class="uk-inline">
                                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: mail"></span>
@@ -65,13 +63,9 @@
                             <button class="uk-button uk-button-default" type="submit">Registrarse</button>
                         </p>
                     </form>
-            
             </div>
         </div>
     </main>
-
     <%- include('./partials/footer')%>
-
 </body>
-
 </html>
