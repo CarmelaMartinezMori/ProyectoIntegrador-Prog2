@@ -113,7 +113,7 @@ const userController = {
                         req.session.password = usuario.password;
                         req.session.idUsuario = usuario.id;
 
-                        if (req.body.recordarme) {
+                        if (req.body.recordame) {
                             res.cookie("usuarioId", usuario.id, {maxAge: 1000 * 60 * 60 * 24})
                         }
                         res.redirect("/")
