@@ -25,18 +25,21 @@ app.use(session( {
   secret: "Mensaje Secreto",
   resave: false,
   saveUninitialized: true 
-}))
+}));
 
+const db = require('./database/models');
+
+// si el usuario puso recordarme y no está la sesión
 app.use(function(req, res, next){
-  if(req.cookies.usuarioId != undefined && req.session.usuario == undefined){ // si el usuario puso recordarme y no está la sesión
-    usuario.findByPk(req.cookies.usuarioId)
+  if(req.cookies.usuarioId != undefined && req.session.usuario == undefined){ 
+    db.Usuario.findByPk(req.cookies.usuarioId)
     .then(usuario => {
       req.session.usuario = usuario.email;
       req.session.idUsuario = usuario.id
     })
   }
   return next();
-})
+});
 
 app.use(function(req, res, next){
   res.locals.usuario = null
@@ -45,7 +48,7 @@ app.use(function(req, res, next){
     res.locals.idUsuario = req.session.idUsuario 
   }
   return next()
-})
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
